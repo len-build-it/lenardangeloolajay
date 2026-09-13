@@ -1,7 +1,7 @@
 # Current handoff: portfolio personal-name SEO
 
 Created: 2026-09-06T15:55:03+08:00
-Updated: 2026-09-12T22:28:50+08:00
+Updated: 2026-09-13T08:37:48+08:00
 State: SEO implemented and locally verified; checkpoint prepared; deployment and Google indexing pending
 Feature: FEAT-001 revision 5
 Plan: revision 3
@@ -21,6 +21,13 @@ This handoff is prepared before committing; confirm that unique message with git
 No push, Render deployment, external profile edit, Search Console verification/submission, or search-ranking validation was performed.
 Next action: with deployment authorization, publish the reviewed build through the existing Render workflow, then follow README's Search Console steps with Len's account access.
 Search indexing, rich results, and first-place ranking are not guaranteed.
+
+## Showcase link update (2026-09-13)
+
+Added the supplied animation showcase link to the introduction's primary action row: `https://lenshowcasesite.onrender.com/`.
+The link opens in a new tab and includes accessible external-link text.
+Verification: `npm run build` passed and `PREVIEW_URL=http://127.0.0.1:4173 npm test` passed with 13 of 13 tests.
+No deployment or external site changes were performed.
 
 ## Read first
 
@@ -104,4 +111,3 @@ Observed through git log:
 - Physical device testing on real hardware is handled by Len; browser emulation measurements establish the verified local behavior.
 - Historical preview addresses below refer to the September 6 session; the SEO production preview is http://127.0.0.1:4189/.
 - In accordance with safety policies, changes have not been pushed to remote and no unrequested deployment was executed.
-

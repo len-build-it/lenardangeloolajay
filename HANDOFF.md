@@ -1,7 +1,7 @@
 # Current handoff: portfolio personal-name SEO
 
 Created: 2026-09-06T15:55:03+08:00
-Updated: 2026-09-13T08:37:48+08:00
+Updated: 2026-09-13T08:43:58+08:00
 State: SEO implemented and locally verified; checkpoint prepared; deployment and Google indexing pending
 Feature: FEAT-001 revision 5
 Plan: revision 3
@@ -24,7 +24,7 @@ Search indexing, rich results, and first-place ranking are not guaranteed.
 
 ## Showcase link update (2026-09-13)
 
-Added the supplied animation showcase link to the introduction's primary action row: `https://lenshowcasesite.onrender.com/`.
+Updated the supplied project showcase link label in the introduction's primary action row to `Project Showcase`: `https://lenshowcasesite.onrender.com/`.
 The link opens in a new tab and includes accessible external-link text.
 Verification: `npm run build` passed and `PREVIEW_URL=http://127.0.0.1:4173 npm test` passed with 13 of 13 tests.
 No deployment or external site changes were performed.

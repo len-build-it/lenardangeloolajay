@@ -5,7 +5,13 @@ Updated: 2026-11-01T18:45:00+08:00
 State: FEAT-002 redesign implemented, verified locally, committed and pushed
 Feature: FEAT-002 revision 4
 Plan: PLAN-002 revision 1
-Design: DESIGN-002 revision 1
+Design: DESIGN-002 revision 2
+
+## AqOne colorway (2026-11-01)
+
+Len confirmed the redesign is live on Render and asked for the AqOne page to use AqOne's colorway.
+Added the `theme-aqone` variable set (DESIGN-002 revision 2), the AqOne logo cropped from Len's banner, and the banner as the page's link-preview image.
+Verification: build passed and 24 of 24 tests passed; AqOne page screenshots at 320 to 1440 px show no horizontal scroll and no broken images.
 
 ## Flagship documentation redesign (2026-11-01)
 

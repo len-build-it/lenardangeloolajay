@@ -1246,3 +1246,45 @@ ol {
 .display--long {
   font-size: clamp(1.875rem, 5vw + 0.75rem, 3.75rem);
 }
+
+/* --------------------------------------------------------------------------
+   AqOne theme: the AqOne brand colorway on the shared neo-brutalist system.
+   Applied with <body class="theme-aqone">; components read these variables.
+   -------------------------------------------------------------------------- */
+
+.theme-aqone {
+  --cream: #eef6fc;
+  --ink: #0a2540;
+  --ink-2: #39546e;
+  --ink-3: #1f3a55;
+  --green: #1581ca;
+  --green-dark: #0b4f9c;
+  --orange: #4cc9d3;
+  --hairline: #cfe1ef;
+  --on-dark: #e4f2fc;
+  --on-dark-2: #b8d9f2;
+
+  --tex-cream: repeating-linear-gradient(135deg, rgba(11, 79, 156, 0.06) 0 1px, transparent 1px 16px);
+  --tex-white: radial-gradient(rgba(10, 37, 64, 0.1) 1.2px, transparent 1.4px);
+}
+
+.theme-aqone .display,
+.theme-aqone .section-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.theme-aqone .page-hero__motto {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.page-hero__logo {
+  width: 440px;
+  max-width: 100%;
+  border: var(--border);
+  border-radius: 18px;
+  box-shadow: 8px 8px 0 var(--orange);
+  background: var(--cream);
+}

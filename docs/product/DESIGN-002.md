@@ -1,8 +1,8 @@
 # DESIGN-002: Guild colorway, neo-brutalist redesign
 
 Created: 2026-11-01T18:10:00+08:00
-Updated: 2026-11-01T18:10:00+08:00
-Revision: 1
+Updated: 2026-11-01T19:25:00+08:00
+Revision: 2
 Status: Approved by Len in chat on 2026-11-01 ("im satisfied with the design, implement those")
 
 ## Authority
@@ -60,3 +60,21 @@ It is the one bold element on the home page; everything around it stays calm.
 Content max width 1160px with a 24px gutter; sections stack to one column at phone width with no horizontal scroll.
 Grids use `repeat(auto-fit, minmax(min(100%, N), 1fr))` so cards reflow without breakpoints.
 The shared header wraps its links on narrow screens; there is no JavaScript menu.
+
+## AqOne page theme (revision 2)
+
+Len asked on 2026-11-01 for the AqOne page to use AqOne's own colorway, taken from the AqOne banner.
+The page sets `<body class="theme-aqone">`, which swaps the shared variables; components and the neo-brutalist rules stay the same.
+
+| Token | Value | Use |
+| --- | --- | --- |
+| Sky | `#EEF6FC` | Page ground |
+| Navy ink | `#0A2540` | Text, borders, hard shadows |
+| Ink secondary | `#39546E` | Secondary text |
+| AqOne blue | `#1581CA` | Shadows |
+| Deep blue | `#0B4F9C` | Hero band, links, footer |
+| Aqua | `#4CC9D3` | Primary buttons, stickers, highlight shadows |
+
+Headings use Outfit 700 instead of Alfa Slab One, matching the AqOne wordmark; the tagline is bold italic as on the banner.
+The hero shows the AqOne logo, cropped from the banner, in a bordered card with an aqua shadow.
+Line art follows the same per-ground rules, recolored in blue.

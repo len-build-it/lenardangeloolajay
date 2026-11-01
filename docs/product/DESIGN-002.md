@@ -32,7 +32,7 @@ Both are self-hosted from `public/assets/fonts/` under the SIL Open Font License
 Cards, photos, buttons, tables, and panels use a 3px ink border and a hard offset shadow with no blur.
 Shadow colors carry meaning: orange for AqOne and highlight panels, green for Guild and general content, ink for buttons and photos.
 Buttons press in on `:active` (shadow drops, element shifts into place); the shift is disabled under `prefers-reduced-motion`.
-Status stickers are small, bordered, slightly rotated labels: "Prototype" (orange, -3deg), "Shelved" (dashed outline, 2deg).
+Status stickers are small, bordered, slightly rotated labels, such as "Prototype" (orange, -3deg).
 Major bands are separated by 3px ink rules.
 Do not use `// LABEL` monospace tags, single-word color highlights, all-caps section numbers, or auto-advancing carousels.
 

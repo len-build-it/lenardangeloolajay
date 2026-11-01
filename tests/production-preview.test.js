@@ -52,7 +52,7 @@ test('Production SEO identifies Lenard and exposes consistent crawlable URLs', a
 
 test('Production preview serves every page quickly with its key content', async () => {
   const expected = {
-    '/': ['Lenard Angelo Olajay', 'What I&#39;m building', 'Other builds'],
+    '/': ['Lenard Angelo Olajay', 'What I&#39;m building', 'Earlier builds'],
     '/aqone/': ['AqOne', 'Gabay sa Bawat Alon, Konektado sa Bawat Layon', 'Recognition'],
     '/devguild/': ['ASU Developers&#39; Guild', 'Learn. Build. Serve.', 'Recognitions'],
     '/credentials/': ['Competitions and awards', 'Skills training', 'Events and webinars'],

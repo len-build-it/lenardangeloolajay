@@ -23,7 +23,7 @@ PREVIEW_URL=http://127.0.0.1:4173 npm test   # tests (needs the preview running)
 ## Project structure
 
 ```text
-├── index.html                  # Home: intro, flagship cards, other builds, skills, recognition, contact
+├── index.html                  # Home: intro, flagship cards, earlier builds, skills, recognition, contact
 ├── aqone/index.html            # AqOne page (public-safe: no technical internals before the patent filing)
 ├── devguild/index.html         # ASU Developers' Guild page
 ├── credentials/index.html      # All certificates, grouped by category

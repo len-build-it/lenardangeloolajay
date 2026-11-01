@@ -1,8 +1,8 @@
 # FEAT-002: Flagship documentation restructure
 
 Created: 2026-11-01T16:30:00+08:00
-Updated: 2026-11-01T19:40:00+08:00
-Revision: 5
+Updated: 2026-11-01T19:50:00+08:00
+Revision: 6
 Status: Approved by Len in chat on 2026-11-01 after reviewing the design canvas
 
 ## Authority and scope
@@ -33,7 +33,7 @@ Describe AqOne's funding goal publicly as "seeking R&D funding", without naming 
 Decisions from the design review (2026-11-01):
 Use the Guild colorway and a neo-brutalist treatment (Len chose the look of ng-brutalism without adopting the Angular library).
 Give each background color its own low-key line pattern.
-Mark Warang and Project Tabang as shelved: development is paused, not abandoned.
+List Warang and Project Tabang as earlier builds (Len revised this from "shelved" later on 2026-11-01).
 The credentials page shows every certificate, grouped into Competitions and awards, Skills training, and Events and webinars.
 Leave the 60-second Guild Reel off the site until it is re-rendered with the official name and founding-members framing.
 On 2026-11-01 Len chose to link the AqOne website (https://aqone-web.onrender.com/) from the AqOne page, after being told it publicly describes AqOne's internals; the portfolio page itself still carries no internals or repository links.
@@ -49,7 +49,7 @@ Competition photos come from that repository's overview PDF annex (1400 px sourc
 
 | Path | Purpose |
 | --- | --- |
-| `/` | Overview: intro, two flagship cards, other builds, skills, recognition summary, contact |
+| `/` | Overview: intro, two flagship cards, earlier builds, skills, recognition summary, contact |
 | `/aqone/` | AqOne documentation page |
 | `/devguild/` | ASU Developers' Guild documentation page |
 | `/credentials/` | Full verified credentials list (moved off the home page) |
@@ -65,7 +65,7 @@ Each page has its own title, meta description, canonical URL, and Open Graph tag
 Keep the intro (name, descriptor, short summary, resume and primary links).
 Replace the three equal build rows with two large flagship cards linking to `/aqone/` and `/devguild/`.
 Each card shows a photo, a one-sentence summary, two or three headline facts, and a "Read more" link.
-Add an "Other builds" section with compact entries for Warang and Project Tabang, each marked "Shelved", keeping their repository links.
+Add an "Earlier builds" section with compact entries for Warang and Project Tabang, keeping their repository links.
 Add a "Skills" section grouped by area (mobile, backend, hardware integration, leadership), listing only skills evidenced by the projects or resume.
 Replace the credential carousel and 16-item list with a short recognition strip of the strongest honors and a link to `/credentials/`.
 Keep the contact section.

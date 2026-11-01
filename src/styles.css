@@ -427,11 +427,6 @@ ol {
   transform: rotate(-3deg);
 }
 
-.sticker--shelved {
-  background: var(--cream);
-  border: 2px dashed var(--ink);
-  transform: rotate(2deg);
-}
 
 .chip {
   display: inline-block;

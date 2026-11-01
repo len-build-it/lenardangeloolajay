@@ -3,9 +3,13 @@
 Created: 2026-09-06T15:55:03+08:00
 Updated: 2026-11-01T18:45:00+08:00
 State: FEAT-002 redesign implemented, verified locally, committed and pushed
-Feature: FEAT-002 revision 5
+Feature: FEAT-002 revision 6
 Plan: PLAN-002 revision 1
 Design: DESIGN-002 revision 2
+
+## Earlier builds (2026-11-01)
+
+Len asked for Warang and Project Tabang to be listed as earlier builds instead of shelved; the section, copy, stickers, tests and specs were updated.
 
 ## Flagship logos and AqOne website link (2026-11-01)
 
@@ -29,7 +33,7 @@ Fonts (Outfit, Alfa Slab One) are self-hosted under the OFL; no page loads third
 The carousel script and its tests were removed; credentials are a static, categorized grid.
 Guild seal and 13 competition photos came from the Guild overview annex, re-encoded to WebP under 200 KB.
 AqOne page states goal, plain-language function, recognition, funding status, and role only; no internals or repository links.
-Warang and Project Tabang are marked shelved on the home page.
+Warang and Project Tabang were first marked shelved, later relisted as earlier builds.
 The 60-second Guild Reel is intentionally absent until it is re-rendered with the official name and founding-members framing.
 Verification: `npm run build` passed; `PREVIEW_URL=http://127.0.0.1:4173 npm test` passed 24 of 24.
 Screenshots of all four pages at 320, 390, 768, 1024 and 1440 px showed no horizontal scroll, no broken images, and all fonts loaded.

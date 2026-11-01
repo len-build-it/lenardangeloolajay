@@ -96,9 +96,13 @@ test('No page links to the AqOne source repository', () => {
   }
 });
 
-test('Shelved builds are marked as shelved', () => {
+test('Warang and Project Tabang are listed as earlier builds', () => {
   const html = readPage(PAGES[0]);
-  assert.equal((html.match(/sticker--shelved">Shelved</g) || []).length, 2, 'Warang and Tabang carry a Shelved sticker');
+  assert.match(html, />Earlier builds<\/h2>/, 'Section is titled Earlier builds');
+  assert.doesNotMatch(html, /shelved/i, 'Builds are not described as shelved');
+  for (const name of ['Warang', 'Project Tabang']) {
+    assert.ok(html.includes(`>${name}</h3>`), `${name} is listed`);
+  }
 });
 
 test('Credentials page lists all 16 certificates in three groups', () => {

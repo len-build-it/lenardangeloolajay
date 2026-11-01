@@ -3,9 +3,16 @@
 Created: 2026-09-06T15:55:03+08:00
 Updated: 2026-11-01T18:45:00+08:00
 State: FEAT-002 redesign implemented, verified locally, committed and pushed
-Feature: FEAT-002 revision 4
+Feature: FEAT-002 revision 5
 Plan: PLAN-002 revision 1
 Design: DESIGN-002 revision 2
+
+## Flagship logos and AqOne website link (2026-11-01)
+
+The home page's flagship cards now show the AqOne banner and the Guild seal instead of competition photos.
+The AqOne page links to https://aqone-web.onrender.com/; Len chose this after being told that site describes AqOne's internals publicly.
+The AqOne page's "technical details are kept private" note was removed because it no longer holds.
+Verification: build passed and 24 of 24 tests passed; flagship cards checked at 390, 1024 and 1440 px.
 
 ## AqOne colorway (2026-11-01)
 

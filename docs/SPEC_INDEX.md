@@ -10,7 +10,7 @@ Updated: 2026-11-01T16:30:00+08:00
 | Product | CONSTRAINTS | [Constraints](product/CONSTRAINTS.md) | 4 | Current quality requirements |
 | Design | DESIGN-001 | [Design and reference investigation](product/DESIGN.md) | 1 | Prepared for Gemini |
 | Feature | FEAT-001 | [Project specification](features/FEAT-001-portfolio.md) | 5 | Current portfolio and requested SEO behavior |
-| Feature | FEAT-002 | [Flagship documentation restructure](features/FEAT-002-flagship-documentation.md) | 4 | Approved 2026-11-01; current |
+| Feature | FEAT-002 | [Flagship documentation restructure](features/FEAT-002-flagship-documentation.md) | 5 | Approved 2026-11-01; current |
 | Design | DESIGN-002 | [Guild colorway, neo-brutalist redesign](product/DESIGN-002.md) | 2 | Approved 2026-11-01; current |
 | Plan | PLAN-002 | [Flagship restructure plan](plans/FEAT-002-implementation.md) | 1 | Executed 2026-11-01 |
 | Plan | PLAN-001 | [Implementation plan](plans/FEAT-001-implementation.md) | 3 | Redesign complete; SEO locally verified, checkpoint prepared |

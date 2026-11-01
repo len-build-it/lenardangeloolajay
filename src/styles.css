@@ -598,11 +598,32 @@ ol {
   box-shadow: 8px 8px 0 var(--orange);
 }
 
-.flagship__img {
-  width: 100%;
+.flagship__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 280px;
-  object-fit: cover;
+  padding: 20px;
   border-bottom: var(--border);
+}
+
+.flagship__media img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.flagship__media--aqone {
+  background: #e2eef1;
+  padding: 0;
+}
+
+.flagship__media--aqone img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: 50% 45%;
 }
 
 .flagship__body {
@@ -619,12 +640,6 @@ ol {
   gap: 12px;
   font-size: 14px;
   color: var(--ink-2);
-}
-
-.flagship__seal {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
 }
 
 .flagship__title {

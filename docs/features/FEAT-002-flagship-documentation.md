@@ -1,8 +1,8 @@
 # FEAT-002: Flagship documentation restructure
 
 Created: 2026-11-01T16:30:00+08:00
-Updated: 2026-11-01T18:10:00+08:00
-Revision: 4
+Updated: 2026-11-01T19:40:00+08:00
+Revision: 5
 Status: Approved by Len in chat on 2026-11-01 after reviewing the design canvas
 
 ## Authority and scope
@@ -36,6 +36,8 @@ Give each background color its own low-key line pattern.
 Mark Warang and Project Tabang as shelved: development is paused, not abandoned.
 The credentials page shows every certificate, grouped into Competitions and awards, Skills training, and Events and webinars.
 Leave the 60-second Guild Reel off the site until it is re-rendered with the official name and founding-members framing.
+On 2026-11-01 Len chose to link the AqOne website (https://aqone-web.onrender.com/) from the AqOne page, after being told it publicly describes AqOne's internals; the portfolio page itself still carries no internals or repository links.
+On the same day Len asked for the AqOne and Guild logos to replace the photos on the home page's flagship cards.
 
 ## Source of truth for Guild facts
 

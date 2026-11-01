@@ -7,6 +7,17 @@ Feature: FEAT-002 revision 6
 Plan: PLAN-002 revision 1
 Design: DESIGN-002 revision 2
 
+## Review follow-ups (2026-11-01)
+
+Len asked to apply the external review points Claude agreed with.
+Hero summary now leads with AqOne's RSTW Champion title and the Guild founder role, with the 2nd-year student line after.
+The home Guild card reads "15 recognitions across 7 member teams in 2026"; the Guild page keeps the founding-members explanation, since stating the wins as Guild wins would be inaccurate.
+Skills lead with an "Offline-first mobile" group.
+On the credentials page, the AqOne honors box (RSTW Champion and others) moved to the top of Competitions and awards with a solid orange-shadow treatment.
+Not applied, with reasons given to Len: contact links and the credentials link already worked on the live site.
+Pending: one public-safe AqOne app screenshot or short clip, which needs an asset from Len.
+Verification: build passed; 24 of 24 tests passed; hero, skills and competitions checked at 390 and 1440 px with no horizontal scroll.
+
 ## Earlier builds (2026-11-01)
 
 Len asked for Warang and Project Tabang to be listed as earlier builds instead of shelved; the section, copy, stickers, tests and specs were updated.

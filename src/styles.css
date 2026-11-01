@@ -1298,3 +1298,7 @@ ol {
   box-shadow: 8px 8px 0 var(--orange);
   background: var(--cream);
 }
+
+.pending-box--top {
+  margin: 0 0 32px;
+}

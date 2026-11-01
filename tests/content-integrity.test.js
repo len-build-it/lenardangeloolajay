@@ -2,93 +2,110 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { PAGES, NAV_LINKS, SITE, projectRoot, readPage, localAssets, allLocalAssets } from './pages.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, '..');
+const meta = (html, attr, key) => {
+  const m = html.match(new RegExp(`<meta ${attr}="${key}" content="([^"]*)"`));
+  return m ? m[1] : null;
+};
 
 test('Public resume exists and is readable', () => {
   const resumePath = path.join(projectRoot, 'public/assets/documents/Lenard-Olajay-Resume-Updated.pdf');
   assert.ok(fs.existsSync(resumePath), 'Resume PDF must exist in public assets');
-  const stat = fs.statSync(resumePath);
-  assert.ok(stat.size > 10000, 'Resume PDF must not be empty');
+  assert.ok(fs.statSync(resumePath).size > 10000, 'Resume PDF must not be empty');
 });
 
-test('All certificate preview images exist and are under 200 KB', () => {
-  const imagesDir = path.join(projectRoot, 'public/assets/images');
-  assert.ok(fs.existsSync(imagesDir), 'Images directory must exist');
-  
-  const expectedImages = [
-    'cert-aifest-aquanons.webp',
-    'cert-ictweek-programming.webp',
-    'cert-komsai-tabang.webp',
-    'cert-dict-python.webp',
-    'cert-dict-cybersecurity.webp',
-    'cert-wvsu-aws.webp',
-    'cert-wvsu-ai.webp',
-    'cert-energy-nexus.webp',
-    'cert-digital-storytelling.webp',
-    'cert-datacamp-openai.webp',
-    'cert-datacamp-python.webp',
-    'cert-datacamp-java-beginner.webp',
-    'cert-datacamp-java-intermediate.webp',
-    'cert-aifest-workshop-human-ai.webp',
-    'cert-aifest-workshop-tech-arch.webp',
-    'cert-aifest-webinar-agile.webp',
-    'project-aqone.webp',
-    'project-tabang.webp',
-    'project-warang.webp',
-    'idpic.jpg'
-  ];
-
-  for (const imgName of expectedImages) {
-    const imgPath = path.join(imagesDir, imgName);
-    assert.ok(fs.existsSync(imgPath), `Image ${imgName} must exist`);
-    const stat = fs.statSync(imgPath);
-    assert.ok(stat.size <= 200 * 1024, `Image ${imgName} must be <= 200KB, was ${stat.size / 1024}KB`);
-  }
-});
-
-test('index.html contains essential semantic sections and no private data', () => {
-  const htmlPath = path.join(projectRoot, 'index.html');
-  assert.ok(fs.existsSync(htmlPath), 'index.html must exist');
-  const html = fs.readFileSync(htmlPath, 'utf-8');
-
-  // Must have skip link, single H1, and main sections
-  assert.match(html, /<a\s+[^>]*href=["']#main-content["']/i, 'Must contain skip link to main content');
-  assert.match(html, /<h1[^>]*>Lenard Angelo Olajay<\/h1>/i, 'Must contain H1 with full name');
-  assert.match(html, /id=["']builds["']/i, 'Must contain builds section');
-  assert.match(html, /id=["']background["']/i, 'Must contain background section');
-  assert.match(html, /id=["']credentials["']/i, 'Must contain credentials section');
-  assert.match(html, /id=["']contact["']/i, 'Must contain contact section');
-
-  // Privacy Policy in footer
-  assert.match(html, /Privacy Policy:/i, 'Must contain Privacy Policy in footer');
-
-  // Contact links
-  assert.match(html, /mailto:olajaylenardangelo@gmail\.com/i, 'Must contain valid mailto');
-  assert.match(html, /https:\/\/www\.linkedin\.com\/in\/lenard-angelo-olajay-35b083366\/?/i, 'Must contain LinkedIn link');
-  assert.match(html, /https:\/\/github\.com\/len-build-it/i, 'Must contain GitHub link');
-  assert.match(html, /https:\/\/www\.facebook\.com\/Ark\.Dcl\/?/i, 'Must contain Facebook link');
-  assert.match(html, /https:\/\/www\.instagram\.com\/len\.build\.it\/?/i, 'Must contain Instagram link');
-  assert.match(html, /https:\/\/ph\.jobstreet\.com\/profiles\/lenardangelo-olajay-n2tQmgnjYd/i, 'Must contain JobStreet link');
-
-  // Privacy: Private phone number must NOT be present
-  assert.doesNotMatch(html, /09944891004/, 'Must not leak private phone number');
-});
-
-test('Every local asset referenced by index.html exists in public/', () => {
-  const html = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf-8');
-  const refs = [...html.matchAll(/(?:href|src|data-thumb)=["'](\/assets\/[^"']+)["']/g)].map((m) => m[1]);
-  assert.ok(refs.length > 0, 'Expected index.html to reference local assets');
-  const missing = [...new Set(refs)].filter(
+test('Every local asset referenced by any page exists in public/', () => {
+  const missing = allLocalAssets().filter(
     (ref) => !fs.existsSync(path.join(projectRoot, 'public', decodeURIComponent(ref)))
   );
   assert.deepEqual(missing, [], `Missing local assets: ${missing.join(', ')}`);
 });
 
-test('index.html does not link to the AqOne source repository', () => {
-  const html = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf-8');
-  assert.doesNotMatch(html, /github\.com\/Aquanons/i, 'AqOne repository must not be linked before the patent filing');
+test('Every referenced image is at most 200 KB', () => {
+  const heavy = allLocalAssets()
+    .filter((ref) => /\.(webp|jpe?g|png)$/i.test(ref))
+    .filter((ref) => fs.statSync(path.join(projectRoot, 'public', decodeURIComponent(ref))).size > 200 * 1024);
+  assert.deepEqual(heavy, [], `Images over 200 KB: ${heavy.join(', ')}`);
+});
+
+for (const page of PAGES) {
+  test(`${page.name} page has its own metadata, one H1, skip link, and the shared header`, () => {
+    const html = readPage(page);
+    const canonical = `${SITE}${page.route}`;
+    assert.ok(html.includes(`<link rel="canonical" href="${canonical}">`), 'Canonical URL must match the route');
+    assert.equal(meta(html, 'property', 'og:url'), canonical, 'og:url must match canonical');
+    assert.ok(meta(html, 'name', 'description'), 'Meta description required');
+    assert.match(html, /<a href="#main" class="skip-link">/, 'Skip link required');
+    assert.match(html, /<main id="main">/, 'Main landmark target required');
+    assert.equal((html.match(/<h1\b/g) || []).length, 1, 'Exactly one H1');
+    for (const href of NAV_LINKS) {
+      assert.ok(html.includes(`<a href="${href}"`), `Header must link to ${href}`);
+    }
+    const current = [...html.matchAll(/<a href="([^"]+)" aria-current="page">/g)].map((m) => m[1]);
+    assert.deepEqual(current, [page.route], 'Exactly one aria-current link, pointing at this page');
+  });
+
+  test(`${page.name} page loads nothing from third parties`, () => {
+    const html = readPage(page);
+    const external = [...html.matchAll(/<(?:script|link|img)\b[^>]*(?:src|href)="(https?:[^"]+)"/g)]
+      .map((m) => m[1])
+      .filter((url) => !url.startsWith(SITE));
+    assert.deepEqual(external, [], `External resources: ${external.join(', ')}`);
+    assert.doesNotMatch(html, /<script(?![^>]*application\/ld\+json)[^>]*>/, 'No scripts besides structured data');
+  });
+}
+
+test('Titles and descriptions are unique across pages', () => {
+  const titles = PAGES.map((p) => readPage(p).match(/<title>([^<]+)<\/title>/)[1]);
+  const descriptions = PAGES.map((p) => meta(readPage(p), 'name', 'description'));
+  assert.equal(new Set(titles).size, PAGES.length, 'Titles must be unique');
+  assert.equal(new Set(descriptions).size, PAGES.length, 'Descriptions must be unique');
+});
+
+test('Home page anchors used by the header exist', () => {
+  const html = readPage(PAGES[0]);
+  for (const id of ['builds', 'skills', 'contact']) {
+    assert.match(html, new RegExp(`id="${id}"`), `Home must contain #${id}`);
+  }
+});
+
+test('Sitemap lists exactly the four page URLs', () => {
+  const xml = fs.readFileSync(path.join(projectRoot, 'public/sitemap.xml'), 'utf-8');
+  const locs = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]);
+  assert.deepEqual(locs, PAGES.map((p) => `${SITE}${p.route}`));
+});
+
+test('Home page keeps contact links and leaks no private data', () => {
+  const html = readPage(PAGES[0]);
+  assert.match(html, /mailto:olajaylenardangelo@gmail\.com/i, 'Must contain valid mailto');
+  assert.match(html, /https:\/\/www\.linkedin\.com\/in\/lenard-angelo-olajay-35b083366\//, 'LinkedIn link');
+  assert.match(html, /https:\/\/github\.com\/len-build-it"/, 'GitHub link');
+  assert.match(html, /https:\/\/www\.facebook\.com\/Ark\.Dcl\//, 'Facebook link');
+  assert.match(html, /https:\/\/www\.instagram\.com\/len\.build\.it\//, 'Instagram link');
+  assert.match(html, /https:\/\/ph\.jobstreet\.com\/profiles\/lenardangelo-olajay-n2tQmgnjYd/, 'JobStreet link');
+  assert.match(html, /Privacy:/, 'Privacy notice in footer');
+  for (const page of PAGES) {
+    assert.doesNotMatch(readPage(page), /0994\s?489\s?1004|09944891004/, `${page.name}: no phone number`);
+  }
+});
+
+test('No page links to the AqOne source repository', () => {
+  for (const page of PAGES) {
+    assert.doesNotMatch(readPage(page), /github\.com\/Aquanons/i, `${page.name}: AqOne repository must not be linked before the patent filing`);
+  }
+});
+
+test('Shelved builds are marked as shelved', () => {
+  const html = readPage(PAGES[0]);
+  assert.equal((html.match(/sticker--shelved">Shelved</g) || []).length, 2, 'Warang and Tabang carry a Shelved sticker');
+});
+
+test('Credentials page lists all 16 certificates in three groups', () => {
+  const html = readPage(PAGES[3]);
+  for (const id of ['competitions', 'training', 'events']) {
+    assert.match(html, new RegExp(`<section id="${id}"`), `Category section #${id}`);
+  }
+  assert.equal((html.match(/class="box cred-card"/g) || []).length, 16, 'Sixteen certificate cards');
+  assert.equal(localAssets(html).filter((a) => a.startsWith('/assets/images/cert-')).length, 16, 'Sixteen certificate thumbnails');
 });

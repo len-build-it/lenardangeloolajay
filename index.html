@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lenard Angelo Olajay's portfolio: software engineering student, AqOne lead developer, and ASU Developers' Guild founder building mobile apps and backend systems.">
+  <meta name="description" content="Lenard Angelo Olajay: software engineering student in Aklan, lead developer of AqOne, an offline SOS system for fishers, and founder of the ASU Developers' Guild.">
   <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#0e5c2a">
   <title>Lenard Angelo Olajay | Developer &amp; Builder Portfolio</title>
   <link rel="canonical" href="https://lenardangeloolajay.onrender.com/">
+  <link rel="icon" href="/assets/images/guild/seal.webp" type="image/webp">
+  <link rel="preload" href="/assets/fonts/alfa-slab-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lenard Angelo Olajay">
   <meta property="og:title" content="Lenard Angelo Olajay | Developer &amp; Builder Portfolio">
-  <meta property="og:description" content="Software engineering student, AqOne lead developer, and ASU Developers' Guild founder building mobile apps and backend systems.">
+  <meta property="og:description" content="Lead developer of AqOne, an offline SOS system for fishers, and founder of the ASU Developers' Guild.">
   <meta property="og:url" content="https://lenardangeloolajay.onrender.com/">
   <meta property="og:image" content="https://lenardangeloolajay.onrender.com/assets/images/idpic.jpg">
   <meta property="og:image:alt" content="Lenard Angelo Olajay">
@@ -40,7 +44,7 @@
           "alternateName": "len.build.it",
           "url": "https://lenardangeloolajay.onrender.com/",
           "image": "https://lenardangeloolajay.onrender.com/assets/images/idpic.jpg",
-          "description": "Software engineering student building mobile apps, backend systems, and tools for local communities.",
+          "description": "Software engineering student in Aklan, lead developer of AqOne and founder of the ASU Developers' Guild.",
           "sameAs": [
             "https://www.linkedin.com/in/lenard-angelo-olajay-35b083366/",
             "https://github.com/len-build-it",
@@ -55,594 +59,187 @@
   </script>
   <link rel="stylesheet" href="/src/styles.css">
 </head>
-<body id="top">
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-  <div class="page-container">
-    <!-- In-Flow Masthead -->
-    <header class="site-masthead" aria-label="Site header">
-      <a href="#top" class="masthead-brand">len.build.it</a>
-      <nav class="masthead-nav" aria-label="Section navigation">
-        <a href="#builds" class="masthead-link">Work</a>
-        <a href="#background" class="masthead-link">About</a>
-        <a href="#credentials" class="masthead-link">Credentials</a>
-        <a href="#contact" class="masthead-link">Contact</a>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a href="/" class="brand">Lenard Angelo Olajay</a>
+      <nav class="site-nav" aria-label="Site">
+        <ul>
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li><a href="/aqone/">AqOne</a></li>
+          <li><a href="/devguild/">Dev Guild</a></li>
+          <li><a href="/#builds">Builds</a></li>
+          <li><a href="/#skills">Skills</a></li>
+          <li><a href="/credentials/">Credentials</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Editorial Introduction (Above the fold) -->
-    <section class="intro-section" aria-labelledby="intro-name">
-      <div class="intro-grid">
-        <div class="intro-header">
-          <h1 id="intro-name" class="intro-name">Lenard Angelo Olajay</h1>
-          <p class="intro-role">Developer / Builder</p>
+  <main id="main">
+    <section class="wrap hero" aria-labelledby="hero-title">
+      <div class="hero__text">
+        <h1 id="hero-title" class="display">Lenard Angelo Olajay</h1>
+        <p class="lede">I build software for people who live past the reach of the city's signal.</p>
+        <p class="hero__summary muted">Developer / Builder and 2nd-year software engineering student at Aklan State University. Lead developer of AqOne, an offline SOS system for municipal fishers, and founder of the ASU Developers' Guild.</p>
+        <div class="actions">
+          <a href="/aqone/" class="btn btn--primary">Read about AqOne</a>
+          <a href="/devguild/" class="btn btn--secondary">Meet the Guild</a>
+          <a href="/assets/documents/Lenard-Olajay-Resume-Updated.pdf" class="text-link" target="_blank" rel="noopener noreferrer">Resume (PDF)<span class="sr-only"> (opens in new tab)</span></a>
         </div>
-
-        <div class="intro-portrait-wrap">
-          <img src="/assets/images/idpic.jpg" alt="Lenard Angelo Olajay" class="intro-portrait" width="180" height="180" fetchpriority="high">
-        </div>
-
-        <div class="intro-body">
-          <p class="intro-summary">
-            Software engineering student building mobile apps, backend systems, and tools for local communities.
-          </p>
-
-          <p class="intro-proof">
-            Lead developer of <strong>AqOne</strong> (DOST RSTW 2026 Student Startup Champion) and founder and president of the <strong>ASU Developers' Guild</strong>. 2nd-year BS in Information Technology (Major in Software Engineering) at Aklan State University.
-          </p>
-
-          <div class="intro-actions" aria-label="Primary actions">
-            <a href="/assets/documents/Lenard-Olajay-Resume-Updated.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
-              View Resume (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-            </a>
-            <a href="https://lenshowcasesite.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-link">
-              Project Showcase <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-            </a>
-            <a href="mailto:olajaylenardangelo@gmail.com" class="btn-link">
-              Email
-            </a>
-            <a href="https://www.linkedin.com/in/lenard-angelo-olajay-35b083366/" target="_blank" rel="noopener noreferrer" class="btn-link">
-              LinkedIn <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-            </a>
-            <a href="https://github.com/len-build-it" target="_blank" rel="noopener noreferrer" class="btn-link">
-              GitHub <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-            </a>
-          </div>
-
-          <div class="intro-socials" aria-label="Secondary social links">
-            <span class="social-label">Also:</span>
-            <a href="https://www.instagram.com/len.build.it/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram<span class="sr-only">(opens in new tab)</span></a>
-            <span class="dot-sep" aria-hidden="true">·</span>
-            <a href="https://www.facebook.com/Ark.Dcl/" target="_blank" rel="noopener noreferrer" class="social-link">Facebook<span class="sr-only">(opens in new tab)</span></a>
-            <span class="dot-sep" aria-hidden="true">·</span>
-            <a href="https://ph.jobstreet.com/profiles/lenardangelo-olajay-n2tQmgnjYd" target="_blank" rel="noopener noreferrer" class="social-link">JobStreet<span class="sr-only">(opens in new tab)</span></a>
+      </div>
+      <div class="hero__portrait">
+        <div class="portrait-ring">
+          <div class="portrait-ring__frame">
+            <img src="/assets/images/idpic.jpg" alt="Portrait of Lenard Angelo Olajay" width="960" height="960" fetchpriority="high">
           </div>
         </div>
       </div>
     </section>
 
-    <main id="main-content">
-      <!-- Section: Selected Builds (Work) -->
-      <section class="content-section" id="builds" aria-labelledby="builds-title">
-        <p class="section-label">01 / Selected Builds</p>
-        <h2 id="builds-title" class="section-title">Selected Builds</h2>
-        <p class="section-subtitle">Practical software solving specific community and field problems.</p>
-
-        <div class="builds-list">
-          <!-- Build 1: AqOne -->
-          <article class="build-row" aria-labelledby="build-aqone-title">
-            <div class="build-header-group">
-              <div class="build-meta-top">
-                <span class="build-badge">DOST RSTW 2026 Champion</span>
+    <section class="ground-white" aria-labelledby="flagships-title">
+      <div class="wrap section">
+        <div class="section-head">
+          <h2 id="flagships-title" class="section-title">What I'm building</h2>
+          <p class="muted">Two long-running efforts, each with its own page of updates.</p>
+        </div>
+        <div class="grid-cards">
+          <article class="box flagship flagship--aqone" aria-labelledby="aqone-card-title">
+            <img class="flagship__img" src="/assets/images/guild/rstw-aqone.webp" alt="Team Aquanons on stage at the DOST Western Visayas RSTW Student Startup Competition" width="1000" height="539" loading="lazy">
+            <div class="flagship__body">
+              <div class="flagship__meta">
+                <span class="sticker sticker--prototype">Prototype</span>
+                <span>Lead developer</span>
               </div>
-              <h3 id="build-aqone-title" class="build-title">AqOne - Offline Maritime SOS Network</h3>
-            </div>
-            <figure class="build-figure">
-              <div class="build-stage">
-                <img src="/assets/images/project-aqone.webp" alt="Lenard Angelo Olajay and Team Aquanons presenting AqOne at the AI Fest 2026 AI Hackathon" class="build-img" loading="lazy" width="600" height="400">
-              </div>
-              <figcaption class="build-caption">
-                Team Aquanons presenting AqOne at the AI Fest 2026 AI Hackathon (2nd Place, School-Based Category).
-              </figcaption>
-            </figure>
-            <div class="build-body-group">
-              <p class="build-role"><strong>Role:</strong> Lead Developer - Backend, Architecture &amp; Deployment.</p>
-              <p class="build-desc">
-                An offline SOS system for municipal fishers in New Washington, Aklan, who fish beyond cellular reach. It lets a fisher at sea call for help and know that responders on shore received the call, with no cell signal needed. AqOne is a prototype, and the team is seeking R&amp;D funding through startup competitions.
-              </p>
-              <p class="build-stack">
-                <span class="stack-label">Stack:</span> Flutter · FastAPI · PostgreSQL
-              </p>
-              <p class="build-stack">
-                <span class="stack-label">Honors:</span> Champion, DOST Western Visayas RSTW Student Startup Competition 2026 · Most Innovative Solution, DTI ASPIRE Startup Bootcamp Demo Day 2026 · Top 30 of 200+, Enactus Philippines National Competition 2026 · Top 4, DICT Philippine Startup Challenge XI (Region VI) · 2nd Place, AI Fest 2026 AI Hackathon (School-Based)
-              </p>
+              <h3 id="aqone-card-title" class="flagship__title">AqOne</h3>
+              <p>An offline SOS system for municipal fishers in New Washington, Aklan. A fisher at sea can call for help and know that responders on shore received it, with no cell signal needed.</p>
+              <ul class="flagship__facts">
+                <li><strong>Champion</strong>, DOST Western Visayas RSTW Student Startup Competition</li>
+                <li><strong>Top 30 of 200+</strong>, Enactus Philippines National Competition</li>
+                <li><strong>Seeking R&amp;D funding</strong> through startup competitions</li>
+              </ul>
+              <a class="flagship__more" href="/aqone/">Read the AqOne story</a>
             </div>
           </article>
 
-          <!-- Build 2: Warang -->
-          <article class="build-row" aria-labelledby="build-warang-title">
-            <div class="build-header-group">
-              <div class="build-meta-top">
-                <span class="build-badge">Active Prototype</span>
+          <article class="box flagship" aria-labelledby="guild-card-title">
+            <img class="flagship__img" src="/assets/images/guild/psc.webp" alt="Guild teams in green jerseys at the Philippine Startup Challenge XI, Region VI" width="1000" height="630" loading="lazy">
+            <div class="flagship__body">
+              <div class="flagship__meta">
+                <img class="flagship__seal" src="/assets/images/guild/seal.webp" alt="" width="36" height="36" loading="lazy">
+                <span>Founder and president</span>
               </div>
-              <h3 id="build-warang-title" class="build-title">
-                <a href="https://github.com/len-build-it/Warang" target="_blank" rel="noopener noreferrer">
-                  Warang - Offline-First Photograph Map <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                </a>
-              </h3>
-            </div>
-            <figure class="build-figure">
-              <div class="build-stage build-stage-warang">
-                <img src="/assets/images/project-warang.webp" alt="Warang logo: sparrow mascot holding a camera for personal photograph mapping" class="build-img build-img-contain" loading="lazy" width="600" height="600">
-              </div>
-              <figcaption class="build-caption">
-                Warang project identity: offline-first personal photograph mapping without cloud servers or accounts.
-              </figcaption>
-            </figure>
-            <div class="build-body-group">
-              <p class="build-role"><strong>Role:</strong> Creator &amp; Sole Developer.</p>
-              <p class="build-desc">
-                An offline-first mobile application that plots your personal photographs on an interactive map. Allows users to capture moments and rediscover memories by physical location, completely private, without user accounts, algorithmic feeds, or cloud uploads.
-              </p>
-              <p class="build-stack">
-                <span class="stack-label">Stack:</span> Flutter · Riverpod · Drift · SQLite · OpenStreetMap
-              </p>
-              <div>
-                <a href="https://github.com/len-build-it/Warang" target="_blank" rel="noopener noreferrer" class="build-link">
-                  View Repository on GitHub <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Build 3: Project Tabang -->
-          <article class="build-row" aria-labelledby="build-tabang-title">
-            <div class="build-header-group">
-              <div class="build-meta-top">
-                <span class="build-badge">UPV KomsaiHack 2026 Top 6</span>
-              </div>
-              <h3 id="build-tabang-title" class="build-title">
-                <a href="https://github.com/len-build-it/Project_Tabang" target="_blank" rel="noopener noreferrer">
-                  Project Tabang - Community Disaster Response <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                </a>
-              </h3>
-            </div>
-            <figure class="build-figure">
-              <div class="build-stage">
-                <img src="/assets/images/project-tabang.webp" alt="Team Tabang at UPV KomsaiHack 2026: RiskReady" class="build-img" loading="lazy" width="600" height="400">
-              </div>
-              <figcaption class="build-caption">
-                Team Tabang at UPV KomsaiHack 2026: RiskReady (Top 6).
-              </figcaption>
-            </figure>
-            <div class="build-body-group">
-              <p class="build-role"><strong>Role:</strong> Backend Developer &amp; Technical Presenter.</p>
-              <p class="build-desc">
-                A localized flood reporting and disaster response platform built for Aklan communities. Connects residents, emergency dispatchers, and coordinators during severe weather events with real-time location-based incident reports and status updates.
-              </p>
-              <p class="build-stack">
-                <span class="stack-label">Stack:</span> React · Firebase · Node.js · Cloudinary
-              </p>
-              <div>
-                <a href="https://github.com/len-build-it/Project_Tabang" target="_blank" rel="noopener noreferrer" class="build-link">
-                  View Repository on GitHub <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                </a>
-              </div>
+              <h3 id="guild-card-title" class="flagship__title">ASU Developers' Guild</h3>
+              <p>A student-led developer organization at Aklan State University, built as a pipeline from student projects to real startups in Aklan.</p>
+              <ul class="flagship__facts">
+                <li><strong>33 members</strong>, officially accredited under the College of Computer Studies</li>
+                <li><strong>15 recognitions across 7 teams</strong>, earned by founding members' teams in 2026</li>
+                <li><strong>Learn. Build. Serve.</strong></li>
+              </ul>
+              <a class="flagship__more" href="/devguild/">Read about the Guild</a>
             </div>
           </article>
         </div>
-      </section>
-
-      <!-- Section: Background, Leadership & Education -->
-      <section class="content-section" id="background" aria-labelledby="background-title">
-        <p class="section-label">02 / Background &amp; Leadership</p>
-        <h2 id="background-title" class="section-title">Community building, technical support, and disciplined engineering.</h2>
-
-        <div class="editorial-grid">
-          <div class="editorial-col">
-            <div class="editorial-item">
-              <h3 class="editorial-item-title">ASU Developers' Guild - Founder &amp; President</h3>
-              <p class="editorial-item-text">
-                Founded the <strong>ASU Developers' Guild</strong>, an officially accredited, student-led developer organization under the College of Computer Studies at Aklan State University, with 33 members. Its motto is "Learn. Build. Serve." Before the Guild was formed, its founding members and their teams earned 15 recognitions across 7 teams in 2026. The Guild now focuses on getting members' software out of competitions and into real use by fishers, farmers, and communities in Aklan, as a pipeline for student-led tech startups in Western Visayas. <a href="https://www.facebook.com/profile.php?id=61595101453457" target="_blank" rel="noopener noreferrer">Guild Facebook page<span class="sr-only"> (opens in new tab)</span></a>.
-              </p>
-            </div>
-
-
-            <div class="editorial-item">
-              <h3 class="editorial-item-title">AI-Assisted Workflow &amp; Engineering Responsibility</h3>
-              <p class="editorial-item-text">
-                I actively integrate modern AI tools to accelerate prototyping, explore architectural patterns, and write boilerplate. Every implementation is grounded in human code review, automated testing, and validation for security, privacy, and UX.
-              </p>
-            </div>
-          </div>
-
-          <div class="editorial-col">
-            <div class="editorial-item">
-              <h3 class="editorial-item-title">Bachelor of Science in Information Technology, Major in Software Engineering</h3>
-              <p class="edu-institution">Aklan State University - Kalibo Campus</p>
-              <p class="edu-meta">2024 - Present · 2nd Year (Expected Class of 2028)</p>
-            </div>
-
-            <div class="editorial-item">
-              <h3 class="editorial-item-title">Core Technical Focus</h3>
-              <p class="editorial-item-text">
-                Specializing in cross-platform mobile applications (Flutter/Dart), resilient backend services (Python, FastAPI, PostgreSQL), and offline-first community tooling designed for real-world constraints.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section: Education & Credentials -->
-      <section class="content-section" id="credentials" aria-labelledby="credentials-title">
-        <p class="section-label">03 / Education &amp; Credentials</p>
-        <h2 id="credentials-title" class="section-title">Verified credentials, hackathon honors, and technical training.</h2>
-
-        <!-- Progressive Enhancement: Certificate Gallery / Carousel Container -->
-        <div id="carousel-container" class="carousel-wrapper" aria-label="Credentials Gallery" style="display: none;">
-          <div class="carousel-toolbar">
-            <span class="carousel-heading">Credentials Gallery</span>
-            <div class="carousel-controls">
-              <span id="carousel-counter" class="carousel-counter" aria-label="Slide 1 of 16">01 / 16</span>
-              <button type="button" class="btn-ctrl" id="carousel-prev" aria-label="Previous credential slide">
-                ←
-              </button>
-              <button type="button" class="btn-ctrl" id="carousel-playpause" aria-label="Pause automatic sliding">
-                Pause
-              </button>
-              <button type="button" class="btn-ctrl" id="carousel-next" aria-label="Next credential slide">
-                →
-              </button>
-            </div>
-          </div>
-
-          <div class="carousel-viewport" id="carousel-viewport" tabindex="0" aria-label="Certificate slides list, press tab or arrow keys to browse">
-            <div class="carousel-track" id="carousel-track">
-              <!-- Slides injected or linked via JS -->
-            </div>
-          </div>
-
-          <div class="sr-only" aria-live="polite" id="carousel-live-region"></div>
-        </div>
-
-        <!-- Canonical Credentials List (Always available without JS) -->
-        <div class="credentials-index" id="credentials-list-section">
-          <h3 class="credentials-index-title">All Verified Credentials &amp; Documents</h3>
-          <p class="credentials-index-subtitle">Direct links to original documents and official certificates.</p>
-
-          <ul class="credentials-list">
-            <!-- Credential 1 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-aifest-aquanons.webp" data-thumb-alt="AI Fest 2026 AI Hackathon Finalist Certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">AI Fest 2026: AI Hackathon - 2nd Place (School-Based Category)</h4>
-                  <span class="cred-badge">2nd Place Award</span>
-                </div>
-                <p class="cred-issuer">AI Fest 2026 Organizing Committee &amp; DOST Western Visayas · August 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/School-based Top 5_Aquanons.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Finalist Selection Letter (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 2 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-ictweek-programming.webp" data-thumb-alt="1st Place Programming Contest Certificate of Recognition">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">1st Place, Programming Contest - ICT Week 2026</h4>
-                  <span class="cred-badge">1st Place Award</span>
-                </div>
-                <p class="cred-issuer">College of Computer Studies &amp; PSITS, Aklan State University · May 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/images/cert-ictweek-programming.webp" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate Image <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 3 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-komsai-tabang.webp" data-thumb-alt="UPV KomsaiHack 2026 RiskReady Top 10 Placement Certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">KomsaiHack 2026: RiskReady - Top 6 (certificate awarded for Top 10 placement)</h4>
-                  <span class="cred-badge">Award / Finalist</span>
-                </div>
-                <p class="cred-issuer">UPV Komsai.Org, University of the Philippines Visayas · May 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/UP-KOMSAI-WEEK.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 4 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-dict-python.webp" data-thumb-alt="DICT Python Programming Essentials Certificate of Completion">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">Python Programming Essentials Training (40 Hours)</h4>
-                  <span class="cred-badge">Technical Training</span>
-                </div>
-                <p class="cred-issuer">DICT Region VI, ICT Literacy &amp; Competency Development Bureau · June 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/DWIA-CERT-AKLAN_OLAJAY.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate No. 2026_ILCDB_1983 (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 5 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-dict-cybersecurity.webp" data-thumb-alt="DICT Cybersecurity Awareness and Data Privacy Certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">Cybersecurity Awareness, Data Privacy &amp; Trends for Students (4 Hours)</h4>
-                  <span class="cred-badge">Training Participation</span>
-                </div>
-                <p class="cred-issuer">DICT Region VI, Cybersecurity Bureau · October 2025</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/DICT-CyberAwareness-2025.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 6 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-wvsu-aws.webp" data-thumb-alt="WVSU Introduction to AWS Cloud Computing webinar certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">Introduction to AWS Cloud Computing: Fundamentals and Developer Workflows</h4>
-                  <span class="cred-badge">Webinar</span>
-                </div>
-                <p class="cred-issuer">College of ICT, West Visayas State University · October 2025</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/WEST-AWS-2025.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 7 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-wvsu-ai.webp" data-thumb-alt="WVSU Explainable AI in Game Development webinar certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">Beyond the Black Box: Explainable AI in Game Development</h4>
-                  <span class="cred-badge">Webinar</span>
-                </div>
-                <p class="cred-issuer">College of ICT, West Visayas State University · October 2025</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/WEST-AI-2025.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 8 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-energy-nexus.webp" data-thumb-alt="Ready, Spark, Charge 2026 energy hackathon certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">Ready, Spark, Charge 2026: Hacking the Future of Energy - Consolation Prize (Team GasUp365)</h4>
-                  <span class="cred-badge">Award</span>
-                </div>
-                <p class="cred-issuer">New Energy Nexus Philippines, with UMWAD Western Visayas, CPUGAD TBI &amp; DOST Western Visayas iHubs · May 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/images/cert-energy-nexus.webp" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate Image <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 9 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-digital-storytelling.webp" data-thumb-alt="CHED ASEAN Creators Digital Storytelling Contest participation certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">ASEAN Creators: Digital Storytelling Contest - Participant</h4>
-                  <span class="cred-badge">Contest Participation</span>
-                </div>
-                <p class="cred-issuer">CHED Regional Office VI, ASEAN Horizons 2026 · September 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/PARTICIPATION- DIGITAL STORYTELLING.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 10 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-datacamp-openai.webp" data-thumb-alt="DataCamp Working with OpenAI API Certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">Working with the OpenAI API Course Completion</h4>
-                  <span class="cred-badge">Course Completion</span>
-                </div>
-                <p class="cred-issuer">DataCamp · August 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/DataCamp-OpenAI-API.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 11 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-datacamp-python.webp" data-thumb-alt="DataCamp Introduction to Python Certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">Introduction to Python Course Completion</h4>
-                  <span class="cred-badge">Course Completion</span>
-                </div>
-                <p class="cred-issuer">DataCamp · August 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/DataCamp-Introduction-to-Python.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 12 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-datacamp-java-beginner.webp" data-thumb-alt="DataCamp Introduction to Java Certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">Introduction to Java Course Completion</h4>
-                  <span class="cred-badge">Course Completion</span>
-                </div>
-                <p class="cred-issuer">DataCamp · August 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/DataCamp-Java-Beginner.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 13 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-datacamp-java-intermediate.webp" data-thumb-alt="DataCamp Intermediate Java Certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">Intermediate Java Course Completion</h4>
-                  <span class="cred-badge">Course Completion</span>
-                </div>
-                <p class="cred-issuer">DataCamp · August 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/DataCamp-Java-Intermediate.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 14 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-aifest-workshop-human-ai.webp" data-thumb-alt="AI Fest AI Hackathon Workshop 1 participation certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">AI Hackathon Workshop 1: Human-Centric AI &amp; Problem Solving</h4>
-                  <span class="cred-badge">Workshop</span>
-                </div>
-                <p class="cred-issuer">AI Fest 2026 Organizing Committee &amp; DOST Western Visayas · July 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/AI-Hackathon-Workshop-1.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 15 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-aifest-workshop-tech-arch.webp" data-thumb-alt="AI Fest AI Hackathon Workshop 2 participation certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">AI Hackathon Workshop 2: Technical Architecture &amp; Data Ethics</h4>
-                  <span class="cred-badge">Workshop</span>
-                </div>
-                <p class="cred-issuer">AI Fest 2026 Organizing Committee &amp; DOST Western Visayas · July 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/AI-Hackathon-Workshop-2.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            <!-- Credential 16 -->
-            <li class="credential-item" data-thumb="/assets/images/cert-aifest-webinar-agile.webp" data-thumb-alt="AI Fest AI Hackathon Webinar 3 participation certificate">
-              <div class="cred-content">
-                <div class="cred-header">
-                  <h4 class="cred-title">AI Hackathon Webinar 3: Agile Prototyping and Technical Execution</h4>
-                  <span class="cred-badge">Webinar</span>
-                </div>
-                <p class="cred-issuer">AI Fest 2026 Organizing Committee &amp; DOST Western Visayas · July 2026</p>
-                <div class="cred-actions">
-                  <a href="/assets/documents/AI-Hackathon-Webinar-3.pdf" target="_blank" rel="noopener noreferrer" class="link-doc">
-                    View Certificate (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-                  </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Section: Contact -->
-      <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
-        <p class="section-label">04 / Contact</p>
-        <h2 id="contact-title" class="section-title">Let's build something useful.</h2>
-        <p class="contact-lead">
-          Based in Kalibo, Aklan, and open to software engineering internships, technical collaborations, and community-driven projects.
-        </p>
-
-        <div class="contact-links-grid" aria-label="Contact channels">
-          <div class="contact-link-row">
-            <span class="contact-link-label">Direct Email</span>
-            <a href="mailto:olajaylenardangelo@gmail.com" class="contact-link-value">olajaylenardangelo@gmail.com</a>
-          </div>
-
-          <div class="contact-link-row">
-            <span class="contact-link-label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/lenard-angelo-olajay-35b083366/" target="_blank" rel="noopener noreferrer" class="contact-link-value">
-              lenard-angelo-olajay-35b083366 <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-            </a>
-          </div>
-
-          <div class="contact-link-row">
-            <span class="contact-link-label">GitHub</span>
-            <a href="https://github.com/len-build-it" target="_blank" rel="noopener noreferrer" class="contact-link-value">
-              github.com/len-build-it <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-            </a>
-          </div>
-
-          <div class="contact-link-row">
-            <span class="contact-link-label">Instagram</span>
-            <a href="https://www.instagram.com/len.build.it/" target="_blank" rel="noopener noreferrer" class="contact-link-value">
-              @len.build.it <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-            </a>
-          </div>
-
-          <div class="contact-link-row">
-            <span class="contact-link-label">Facebook</span>
-            <a href="https://www.facebook.com/Ark.Dcl/" target="_blank" rel="noopener noreferrer" class="contact-link-value">
-              facebook.com/Ark.Dcl <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-            </a>
-          </div>
-
-          <div class="contact-link-row">
-            <span class="contact-link-label">JobStreet</span>
-            <a href="https://ph.jobstreet.com/profiles/lenardangelo-olajay-n2tQmgnjYd" target="_blank" rel="noopener noreferrer" class="contact-link-value">
-              JobStreet Profile <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-actions">
-          <a href="/assets/documents/Lenard-Olajay-Resume-Updated.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
-            Download Latest Resume (PDF) <span class="external-hint" aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
-          </a>
-          <a href="#top" class="footer-backtop">Back to Top ↑</a>
-        </div>
-      </section>
-    </main>
-
-    <!-- Site Footer -->
-    <footer class="site-footer" aria-label="Site footer">
-      <div class="footer-meta">
-        <p class="footer-credit">Lenard Angelo Olajay · Kalibo, Aklan, Philippines</p>
-        <p class="footer-privacy">
-          <strong>Privacy Policy:</strong> This static portfolio does not collect personal data, store cookies, or track visitors. Outbound links are subject to the privacy policies of their respective services.
-        </p>
       </div>
-      <div class="footer-actions">
-        <a href="#top" class="footer-backtop">Top ↑</a>
-      </div>
-    </footer>
-  </div>
+    </section>
 
-  <script type="module" src="/src/main.js"></script>
+    <section id="builds" class="wrap section" aria-labelledby="builds-title">
+      <div class="section-head">
+        <h2 id="builds-title" class="section-title section-title--sm">Other builds</h2>
+        <p class="muted">Both are shelved while I focus on AqOne and the Guild. I plan to pick them back up.</p>
+      </div>
+      <div class="mini-builds">
+        <article class="mini-build" aria-labelledby="warang-title">
+          <img class="mini-build__img mini-build__img--warang" src="/assets/images/project-warang.webp" alt="Warang sparrow mascot holding a camera" width="600" height="600" loading="lazy">
+          <div>
+            <div class="mini-build__head">
+              <h3 id="warang-title" class="mini-build__title">Warang</h3>
+              <span class="sticker sticker--shelved">Shelved</span>
+            </div>
+            <p>An offline-first Flutter app that plots your own photos on a map. No accounts, no feed, no cloud.</p>
+            <a href="https://github.com/len-build-it/Warang" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in new tab)</span></a>
+          </div>
+        </article>
+        <article class="mini-build" aria-labelledby="tabang-title">
+          <img class="mini-build__img" src="/assets/images/project-tabang.webp" alt="Team Tabang poster for UPV KomsaiHack 2026: RiskReady" width="1080" height="1080" loading="lazy">
+          <div>
+            <div class="mini-build__head">
+              <h3 id="tabang-title" class="mini-build__title">Project Tabang</h3>
+              <span class="sticker sticker--shelved">Shelved</span>
+            </div>
+            <p>A community flood-reporting map for Aklan. Top 6 at UPV KomsaiHack 2026. I built the backend and presented it.</p>
+            <a href="https://github.com/len-build-it/Project_Tabang" target="_blank" rel="noopener noreferrer">View on GitHub<span class="sr-only"> (opens in new tab)</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="wrap section section--tight" aria-labelledby="skills-title">
+      <div class="section-head">
+        <h2 id="skills-title" class="section-title section-title--sm">Skills</h2>
+      </div>
+      <div class="skills">
+        <div class="box skill-box">
+          <h3>Mobile</h3>
+          <p>Flutter and Dart, Riverpod, Drift and SQLite, offline-first data</p>
+        </div>
+        <div class="box skill-box">
+          <h3>Backend</h3>
+          <p>Python, FastAPI, PostgreSQL, REST APIs, Docker, deployment</p>
+        </div>
+        <div class="box skill-box">
+          <h3>Web and languages</h3>
+          <p>JavaScript, HTML, CSS, Java, Git and GitHub</p>
+        </div>
+        <div class="box skill-box">
+          <h3>Leading</h3>
+          <p>Founding and running a student org, pitching to judges and partners, coordinating teams</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section section--tight" aria-labelledby="recognition-title">
+      <div class="section-head section-head--split">
+        <h2 id="recognition-title" class="section-title section-title--sm">Recognition</h2>
+        <a href="/credentials/" class="text-link">All credentials</a>
+      </div>
+      <ol class="box honors">
+        <li><span class="honors__date">Oct 2026</span><span class="honors__event">RSTW Student Startup Competition</span><span class="honors__result">Champion</span></li>
+        <li><span class="honors__date">Oct 2026</span><span class="honors__event">Enactus Philippines Nationals</span><span class="honors__result">Top 30 of 200+</span></li>
+        <li><span class="honors__date">Oct 2026</span><span class="honors__event">Philippine Startup Challenge XI, Region VI</span><span class="honors__result">Top 4</span></li>
+        <li><span class="honors__date">Sept 2026</span><span class="honors__event">DTI ASPIRE Demo Day</span><span class="honors__result">Most Innovative Solution</span></li>
+        <li><span class="honors__date">Aug 2026</span><span class="honors__event">AI Fest 2026 AI Hackathon</span><span class="honors__result">2nd Place, School-Based</span></li>
+      </ol>
+    </section>
+
+    <section id="contact" class="ground-green contact" aria-labelledby="contact-title">
+      <div class="wrap contact__inner">
+        <div class="contact__text">
+          <h2 id="contact-title" class="section-title">Let's talk</h2>
+          <p>Based in Kalibo, Aklan. Open to internships, collaborations and conversations about AqOne or the Guild.</p>
+          <a class="contact__email" href="mailto:olajaylenardangelo@gmail.com">olajaylenardangelo@gmail.com</a>
+        </div>
+        <nav class="contact__links" aria-label="Profiles">
+          <a href="https://www.linkedin.com/in/lenard-angelo-olajay-35b083366/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a>
+          <a href="https://github.com/len-build-it" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a>
+          <a href="https://www.facebook.com/Ark.Dcl/" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (opens in new tab)</span></a>
+          <a href="https://www.instagram.com/len.build.it/" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> (opens in new tab)</span></a>
+          <a href="https://ph.jobstreet.com/profiles/lenardangelo-olajay-n2tQmgnjYd" target="_blank" rel="noopener noreferrer">JobStreet<span class="sr-only"> (opens in new tab)</span></a>
+          <a href="https://lenshowcasesite.onrender.com/" target="_blank" rel="noopener noreferrer">Project Showcase<span class="sr-only"> (opens in new tab)</span></a>
+          <a href="/assets/documents/Lenard-Olajay-Resume-Updated.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)<span class="sr-only"> (opens in new tab)</span></a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer ground-green ground-green--from-left">
+    <div class="wrap site-footer__inner">
+      <p>Lenard Angelo Olajay, Kalibo, Aklan, Philippines</p>
+      <p><strong>Privacy:</strong> this site sets no cookies and does not track visitors.</p>
+    </div>
+  </footer>
 </body>
 </html>

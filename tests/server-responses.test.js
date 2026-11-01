@@ -1,12 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, '..');
+import { PAGES, allLocalAssets } from './pages.js';
 
 async function getActiveServerUrl() {
   if (process.env.PREVIEW_URL) return process.env.PREVIEW_URL;
@@ -19,39 +13,25 @@ async function getActiveServerUrl() {
   return null;
 }
 
-test('Active server serves index.html with 200 OK and valid content', async () => {
+test('Active server serves every page with 200 OK', async () => {
   const serverUrl = await getActiveServerUrl();
   assert.ok(serverUrl, 'A local server (preview: 4173 or dev: 5173) must be active for this check');
-  
-  const res = await fetch(`${serverUrl}/`);
-  assert.equal(res.status, 200, 'Home page should respond with 200');
-  const html = await res.text();
-  assert.ok(html.includes('Lenard Angelo Olajay'), 'Should contain Lenard Angelo Olajay');
-  assert.ok(html.includes('Developer / Builder'), 'Should contain Developer / Builder');
-  assert.ok(html.includes('AqOne'), 'Should contain AqOne build');
-  assert.ok(html.includes('Warang'), 'Should contain Warang build');
-  assert.ok(html.includes('Project Tabang'), 'Should contain Project Tabang build');
+  for (const page of PAGES) {
+    const res = await fetch(`${serverUrl}${page.route}`);
+    assert.equal(res.status, 200, `${page.route} should respond with 200`);
+    const html = await res.text();
+    assert.ok(html.includes('Lenard Angelo Olajay'), `${page.route} should name Lenard Angelo Olajay`);
+  }
 });
 
-test('All local asset paths in index.html resolve with 200 OK on active server', async () => {
+test('Every local asset referenced by any page resolves on the active server', async () => {
   const serverUrl = await getActiveServerUrl();
   assert.ok(serverUrl, 'A local server must be active for this check');
-
-  const html = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf-8');
-  
-  const assetUrls = new Set();
-  const assetMatches = html.matchAll(/(?:src|href|data-thumb)=["'](\/assets\/[^"']+)["']/g);
-  for (const m of assetMatches) {
-    assetUrls.add(m[1]);
-  }
-
-  assert.ok(assetUrls.size >= 15, `Found ${assetUrls.size} local assets in markup`);
-
-  for (const urlPath of assetUrls) {
-    const fullUrl = `${serverUrl}${urlPath}`;
-    const res = await fetch(fullUrl);
+  const assets = allLocalAssets();
+  assert.ok(assets.length >= 30, `Found ${assets.length} local assets in markup`);
+  for (const urlPath of assets) {
+    const res = await fetch(`${serverUrl}${urlPath}`);
     assert.equal(res.status, 200, `Asset ${urlPath} should resolve with 200, got ${res.status}`);
-    const arrayBuffer = await res.arrayBuffer();
-    assert.ok(arrayBuffer.byteLength > 0, `Asset ${urlPath} must not be empty`);
+    assert.ok((await res.arrayBuffer()).byteLength > 0, `Asset ${urlPath} must not be empty`);
   }
 });

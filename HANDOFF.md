@@ -1,11 +1,27 @@
-# Current handoff: portfolio personal-name SEO
+# Current handoff: flagship documentation redesign
 
 Created: 2026-09-06T15:55:03+08:00
-Updated: 2026-11-01T14:20:00+08:00
-State: SEO implemented and locally verified; checkpoint prepared; deployment and Google indexing pending
-Feature: FEAT-001 revision 5
-Plan: revision 3
-Design: DESIGN-001 revision 1
+Updated: 2026-11-01T18:45:00+08:00
+State: FEAT-002 redesign implemented, verified locally, committed and pushed
+Feature: FEAT-002 revision 4
+Plan: PLAN-002 revision 1
+Design: DESIGN-002 revision 1
+
+## Flagship documentation redesign (2026-11-01)
+
+Len approved the "Portfolio redesign mock-up" design canvas and asked for implementation with commits and pushes.
+The site is now four static pages: `/`, `/aqone/`, `/devguild/`, `/credentials/`, sharing one header and `src/styles.css`.
+Visual system per DESIGN-002: Guild colorway, neo-brutalist borders and hard shadows, one line-art pattern per background color.
+Fonts (Outfit, Alfa Slab One) are self-hosted under the OFL; no page loads third-party resources or scripts.
+The carousel script and its tests were removed; credentials are a static, categorized grid.
+Guild seal and 13 competition photos came from the Guild overview annex, re-encoded to WebP under 200 KB.
+AqOne page states goal, plain-language function, recognition, funding status, and role only; no internals or repository links.
+Warang and Project Tabang are marked shelved on the home page.
+The 60-second Guild Reel is intentionally absent until it is re-rendered with the official name and founding-members framing.
+Verification: `npm run build` passed; `PREVIEW_URL=http://127.0.0.1:4173 npm test` passed 24 of 24.
+Screenshots of all four pages at 320, 390, 768, 1024 and 1440 px showed no horizontal scroll, no broken images, and all fonts loaded.
+Issues found and fixed during verification: HTML `height` attributes overrode CSS aspect ratios (fixed with `img { height: auto; }`), the AqOne hero photo was undersized, and the Guild title touched the screen edge at phone width.
+Open items: Render's serving of `/aqone/` and other folder routes must be confirmed on the live site after deploy; resume PDF still lacks the October honors and says Top 10 for KomsaiHack; Reel re-render pending.
 
 ## Guild-record accuracy pass (2026-11-01)
 

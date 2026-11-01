@@ -87,3 +87,8 @@ test('Every local asset referenced by index.html exists in public/', () => {
   );
   assert.deepEqual(missing, [], `Missing local assets: ${missing.join(', ')}`);
 });
+
+test('index.html does not link to the AqOne source repository', () => {
+  const html = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf-8');
+  assert.doesNotMatch(html, /github\.com\/Aquanons/i, 'AqOne repository must not be linked before the patent filing');
+});

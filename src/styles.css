@@ -735,6 +735,18 @@ body {
   color: var(--color-ink-secondary);
 }
 
+.editorial-item-text a {
+  color: var(--color-ink-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.editorial-item-text a:hover {
+  text-decoration-color: var(--color-ink-primary);
+}
+
 .editorial-item-text strong {
   font-weight: 600;
   color: var(--color-ink-primary);

@@ -7,6 +7,18 @@ Feature: FEAT-001 revision 5
 Plan: revision 3
 Design: DESIGN-001 revision 1
 
+## Guild-record accuracy pass (2026-11-01)
+
+Compared the site with `03-DEV-GUILD/DevGuild/docs/MEDIA_AND_OUTREACH_RECORD.md` and Len's answers in chat.
+Removed both AqOne repository links and the AqOne internals (relay chain, ESP32, LoRa) ahead of the 2026-11-10 patent work; added a test that fails if `github.com/Aquanons` returns.
+Added Enactus Top 30 of 200+ to AqOne honors; Len confirmed the AI Fest 2nd Place was AqOne.
+Expanded the Guild paragraph with the record's facts and founding-members framing, and linked the Guild Facebook page.
+Changed Tabang to Top 6 (Len: organizers gave certificates only for Top 10 placement) and listed Ready, Spark, Charge 2026 as a Consolation Prize with Team GasUp365.
+Verification: build passed and 15 of 15 tests passed in the Linux copy; desktop and mobile screenshots checked with no horizontal scroll.
+Not committed or deployed.
+The resume PDF still says Top 10 for KomsaiHack and lacks the October honors.
+FEAT-002 revision 3 (flagship documentation restructure) is drafted and awaiting Len's approval.
+
 ## Content accuracy refresh (2026-11-01)
 
 Len asked for a stale-content audit and then approved the updates in chat on 2026-11-01.

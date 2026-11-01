@@ -1,11 +1,31 @@
 # Current handoff: portfolio personal-name SEO
 
 Created: 2026-09-06T15:55:03+08:00
-Updated: 2026-09-13T08:43:58+08:00
+Updated: 2026-11-01T14:20:00+08:00
 State: SEO implemented and locally verified; checkpoint prepared; deployment and Google indexing pending
 Feature: FEAT-001 revision 5
 Plan: revision 3
 Design: DESIGN-001 revision 1
+
+## Content accuracy refresh (2026-11-01)
+
+Len asked for a stale-content audit and then approved the updates in chat on 2026-11-01.
+Every credential was checked against its actual certificate file.
+Corrected credentials that misstated the source: the WVSU AWS webinar was listed as "AWS re/Start", and the WVSU Explainable AI webinar was listed as an "AI & ML Foundations Workshop".
+Fixed four broken certificate links and linked the existing DataCamp, AI Fest workshop, and CHED digital storytelling PDFs.
+Corrected titles and dates for DataCamp, AI Fest workshops, Energy Nexus, digital storytelling, and DICT cybersecurity credentials.
+Updated AqOne to the current SOS-handshake framing and added an Honors line: RSTW 2026 Champion, DTI ASPIRE Most Innovative Solution, PSC XI Region VI Top 4, AI Fest 2026 2nd Place (School-Based).
+RSTW, ASPIRE, and PSC XI appear as text only because Len has no certificate files for them yet.
+Renamed ASU DevGuild to ASU Developers' Guild (accredited, 33 members), removed the Student Assistant entry, and kept 2nd Year as confirmed by Len.
+Replaced em dashes in visible copy with plain dashes.
+Restored the Selected Builds text styles (badge, title, role, description, stack, caption, link) that commit f92ffa5 accidentally dropped from src/styles.css.
+Added a content-integrity test that fails when index.html references a missing local asset; it reports the four broken links against the previous HEAD.
+Verification: build passed and `PREVIEW_URL=http://127.0.0.1:4173 npm test` passed 14 of 14, run in a Linux copy because the local node_modules is the Windows install.
+Desktop 1440px and mobile 390px screenshots checked; no horizontal scroll.
+Not done: no commit, push, or deployment.
+The resume PDF is still stale (no October 2026 honors) and its LinkedIn URL differs from the site's.
+A stale `.git/stale-index-lock-claude` file was left by a blocked git cleanup and can be deleted.
+Next action: Len reviews the diff, commits, and deploys; then update the resume PDF.
 
 ## Current SEO work
 

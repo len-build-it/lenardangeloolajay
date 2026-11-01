@@ -59,10 +59,10 @@ test('Production preview server serves index.html with 200 OK', async () => {
   const html = await res.text();
   assert.ok(html.includes('Lenard Angelo Olajay'), 'Must contain Lenard Angelo Olajay');
   assert.ok(html.includes('Developer / Builder'), 'Must contain Developer / Builder');
-  assert.ok(html.includes('AqOne — Offline Maritime Safety'), 'Must contain AqOne build');
-  assert.ok(html.includes('Warang — Offline-First Photograph Map'), 'Must contain Warang build');
-  assert.ok(html.includes('Project Tabang — Community Disaster Response'), 'Must contain Project Tabang');
-  assert.ok(html.includes('ASU DevGuild Founder'), 'Must contain ASU DevGuild');
+  assert.ok(html.includes('AqOne - Offline Maritime SOS Network'), 'Must contain AqOne build');
+  assert.ok(html.includes('Warang - Offline-First Photograph Map'), 'Must contain Warang build');
+  assert.ok(html.includes('Project Tabang - Community Disaster Response'), 'Must contain Project Tabang');
+  assert.ok(html.includes('ASU Developers&#39; Guild - Founder') || html.includes("ASU Developers' Guild - Founder"), 'Must contain ASU Developers Guild');
   assert.ok(html.includes('Bachelor of Science in Information Technology, Major in Software Engineering'), 'Must contain verified degree');
   assert.ok(html.includes('All Verified Credentials &amp; Documents') || html.includes('All Verified Credentials & Documents'), 'Must contain credentials list');
 });

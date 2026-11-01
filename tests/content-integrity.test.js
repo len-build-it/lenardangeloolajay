@@ -77,3 +77,13 @@ test('index.html contains essential semantic sections and no private data', () =
   // Privacy: Private phone number must NOT be present
   assert.doesNotMatch(html, /09944891004/, 'Must not leak private phone number');
 });
+
+test('Every local asset referenced by index.html exists in public/', () => {
+  const html = fs.readFileSync(path.join(projectRoot, 'index.html'), 'utf-8');
+  const refs = [...html.matchAll(/(?:href|src|data-thumb)=["'](\/assets\/[^"']+)["']/g)].map((m) => m[1]);
+  assert.ok(refs.length > 0, 'Expected index.html to reference local assets');
+  const missing = [...new Set(refs)].filter(
+    (ref) => !fs.existsSync(path.join(projectRoot, 'public', decodeURIComponent(ref)))
+  );
+  assert.deepEqual(missing, [], `Missing local assets: ${missing.join(', ')}`);
+});

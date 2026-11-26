@@ -1,7 +1,7 @@
 # FEAT-003 Verification Evidence: Student Chasing Impact
 
 Created: 2026-11-26T09:08:00+08:00
-Updated: 2026-11-26T09:14:00+08:00
+Updated: 2026-11-26T09:17:30+08:00
 Feature: FEAT-003 revision 1
 Plan: PLAN-003 revision 1
 Design: DESIGN-002 revision 3
@@ -11,8 +11,8 @@ Design: DESIGN-002 revision 3
 | Phase | Scope | Tests passing | Visual / Responsive | Checkpoint commit | Status |
 | --- | --- | --- | --- | --- | --- |
 | Phase 1 | Home page reframed, title/metadata, nav update, status ladder CSS | 24 of 24 | Verified at 320, 390, 768, 1024, 1440 px; no horizontal scroll | 009d265 | Complete |
-| Phase 2 | AqOne page path to impact, status ladder, source confirmations | 25 of 25 | Verified at 320, 390, 768, 1024, 1440 px; no horizontal scroll | Pending commit | Complete |
-| Phase 3 | Guild page path to real use, status ladder | Pending | Pending | Pending | Pending |
+| Phase 2 | AqOne page path to impact, status ladder, source confirmations | 25 of 25 | Verified at 320, 390, 768, 1024, 1440 px; no horizontal scroll | 9c60cf9 | Complete |
+| Phase 3 | Guild page path to real use, status ladder | 25 of 25 | Verified at 320, 390, 768, 1024, 1440 px; no horizontal scroll | Pending commit | Complete |
 
 ## Phase 1: Home page reframed
 
@@ -85,3 +85,38 @@ Measured on production preview server (`http://127.0.0.1:4173/aqone/`):
 
 - Omitted statistics: Oceana 442,014 registered boats (source page could not be confirmed); Pew 100,000 fishing deaths (source URL gated by Cloudflare anti-bot check).
 - Physical device testing on real hardware is handled by Len; browser measurements establish verified local behavior.
+
+## Phase 3: Guild page path from prototype to real use
+
+### Requirements verified
+
+- **REQ-013**: The first section after the hero leads with "The problem" and contains the approved Guild problem copy verbatim: "Most student projects stay in the competitions. Every Guild team, AqOne included, is still at the prototype stage. The Guild exists to close that gap: structure, programs and a path from classroom project to real users."
+- **REQ-014**: "What's next" replaced with the Guild status ladder showing where it stands across 7 approved rungs:
+  - Officially accredited under the College of Computer Studies, 2026 (Done)
+  - 7 founding-member teams competing, 15 recognitions in 2026 (Done)
+  - Show and Tell (moved from Nov 14, 2026; new date to be announced) (Next)
+  - Recruitment drive, Nov 30 to Dec 4, 2026 (Next)
+  - New member orientation, Jan 30, 2027 (Next)
+  - First ASU hackathon, Mar 2027 (proposed) (Goal)
+  - First member project in real use (Goal)
+  - Unconfirmed/past-dated roadmap items dropped; no "What I learned" lines written.
+  - Faculty adviser Edward S. Gumban, MIT is the only other named person; no teammates or members named (FEAT-002 AC-3).
+
+### Automated test results
+
+- `npm run build`: built in 261ms cleanly.
+- `PREVIEW_URL=http://127.0.0.1:4173 npm test`: 25 of 25 passed (0 failures).
+
+### Responsive and visual QA
+
+Measured on production preview server (`http://127.0.0.1:4173/devguild/`):
+- 320x900 px: viewport = 320 px, scrollWidth = 320 px, hasOverflow = false. Screenshot: `docs/evidence/screenshots/feat003-devguild-320px.png`
+- 390x900 px: viewport = 390 px, scrollWidth = 390 px, hasOverflow = false. Screenshot: `docs/evidence/screenshots/feat003-devguild-390px.png`
+- 768x900 px: viewport = 768 px, scrollWidth = 768 px, hasOverflow = false. Screenshot: `docs/evidence/screenshots/feat003-devguild-768px.png`
+- 1024x900 px: viewport = 1024 px, scrollWidth = 1009 px, hasOverflow = false. Screenshot: `docs/evidence/screenshots/feat003-devguild-1024px.png`
+- 1440x900 px: viewport = 1440 px, scrollWidth = 1425 px, hasOverflow = false. Screenshot: `docs/evidence/screenshots/feat003-devguild-1440px.png`
+
+### Limitations
+
+- Physical device testing on real hardware is handled by Len; browser measurements establish verified local behavior.
+- Show and Tell date remains pending Len's confirmation of the rescheduled date.

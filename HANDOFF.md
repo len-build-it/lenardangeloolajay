@@ -1,8 +1,8 @@
 # Current handoff: student chasing impact (FEAT-003)
 
 Created: 2026-11-26T00:48:16+08:00
-Updated: 2026-11-26T09:14:00+08:00
-State: In progress; Phase 2 complete, Phase 3 next
+Updated: 2026-11-26T09:18:30+08:00
+State: Executed; all 3 phases completed and committed
 Feature: FEAT-003 revision 1
 Plan: PLAN-003 revision 1
 Design: DESIGN-002 revision 3
@@ -53,10 +53,11 @@ Decisions Len made in chat are listed in FEAT-003 "Decisions and assumptions"; d
 ## Progress and working tree
 
 Phase 1 (home page reframed) completed and committed at `009d265`.
-Phase 2 (AqOne page path to impact) completed and verified:
-- Rewrote and reordered `aqone/index.html` per REQ-008 (hero, the problem, what AqOne does, where it stands status ladder, how we'll know it works, recognition and what it opened up, my role, on stage, updates).
-- Omitted unconfirmed statistics (Oceana 442,014 boat count could not be confirmed on source; Pew 100,000 fishing deaths was gated by Cloudflare anti-bot challenge); stated Aklan local data gap honestly.
-- Added REQ-010 automated test ensuring no forbidden technical or internal terms appear on the AqOne page.
+Phase 2 (AqOne page path to impact) completed and committed at `9c60cf9`.
+Phase 3 (Guild page path from prototype to real use) completed and verified:
+- Added the Guild problem copy immediately after the hero leading with "The problem" per REQ-013.
+- Replaced "What's next" with the Guild status ladder across 7 approved rungs per REQ-014; dropped unconfirmed/past-dated items.
+- Added `min-width: 0;` defensive CSS to `.two-col__side`.
 - 25 of 25 tests passed in `npm test` against local preview.
 - Captured screenshots at 320, 390, 768, 1024, and 1440 px with no horizontal overflow.
 
@@ -90,8 +91,9 @@ Do not reset a count on a new session or silently reinterpret a failed check as 
 
 ## Next action
 
-Execute PLAN-003 phase 2 (AqOne page), then phase 3 (Guild page), committing each with its checkpoint message and verifying the hash from Git.
-After phase 3, update this handoff and SPEC_INDEX to mark FEAT-003 executed and report commit hashes, checks and limitations.
+All three phases of FEAT-003 / PLAN-003 are complete and verified with checkpoint commits.
+Report execution completion, commit hashes, actual test results, screenshot paths, omitted statistics, and limitations to Len.
+Awaiting Len's authorization for deployment/publishing.
 
 ## History
 

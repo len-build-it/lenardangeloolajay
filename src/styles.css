@@ -915,6 +915,7 @@ ol {
 
 .two-col__side {
   flex: 1 1 300px;
+  min-width: 0;
   align-self: flex-start;
 }
 

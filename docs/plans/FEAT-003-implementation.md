@@ -65,21 +65,21 @@ Checkpoint message: `feat(portfolio): show AqOne's path to impact`
 ## Phase 3: Guild page
 
 Requirements: FEAT-003/REQ-013, REQ-014
-State: Awaiting approval
+State: Complete
 
 ### Tasks
 
-- [ ] Add the Guild problem copy after the hero and replace "What's next" with the Guild status ladder in `devguild/index.html`.
-- [ ] Drop past-dated roadmap items Len has not confirmed.
+- [x] Add the Guild problem copy after the hero and replace "What's next" with the Guild status ladder in `devguild/index.html`.
+- [x] Drop past-dated roadmap items Len has not confirmed.
 
 ### Verification
 
-- [ ] Build and full test suite pass.
-- [ ] Guild page screenshots at the five widths, recorded in the evidence file.
+- [x] Build and full test suite pass (25 of 25 passed).
+- [x] Guild page screenshots at the five widths, recorded in the evidence file.
 
 ### Review and checkpoint
 
-- [ ] Same gates as Phase 1; update SPEC_INDEX and HANDOFF to mark FEAT-003 executed.
+- [x] Same gates as Phase 1; update SPEC_INDEX and HANDOFF to mark FEAT-003 executed.
 
 Checkpoint message: `feat(portfolio): show the Guild's path from prototype to real use`
 

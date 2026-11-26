@@ -1302,3 +1302,79 @@ ol {
 .pending-box--top {
   margin: 0 0 32px;
 }
+
+/* --------------------------------------------------------------------------
+   Status ladder (DESIGN-002 revision 3)
+   Ordered list showing where an effort stands: Done, Now, Next, Goal.
+   -------------------------------------------------------------------------- */
+
+.status-ladder {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.status-ladder__rung {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.status-ladder__rung:last-child {
+  border-bottom: none;
+}
+
+.status-ladder__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.status-ladder__text {
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.status-ladder__learned {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: var(--ink-2);
+}
+
+.sticker--done {
+  background: #e3f1e7;
+  border: 2px solid var(--ink);
+  color: var(--green-dark);
+}
+
+.sticker--now {
+  background: var(--orange);
+  border: 2px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  color: var(--ink);
+}
+
+.sticker--next,
+.sticker--goal {
+  background: transparent;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+}
+
+.theme-aqone .status-ladder {
+  box-shadow: 6px 6px 0 var(--orange);
+}
+
+@media (max-width: 600px) {
+  .status-ladder__rung {
+    padding: 16px 20px;
+  }
+
+  .status-ladder__row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+

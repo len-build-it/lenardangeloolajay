@@ -65,7 +65,7 @@ test('Titles and descriptions are unique across pages', () => {
 
 test('Home page anchors used by the header exist', () => {
   const html = readPage(PAGES[0]);
-  for (const id of ['builds', 'skills', 'contact']) {
+  for (const id of ['builds', 'how-i-build', 'contact']) {
     assert.match(html, new RegExp(`id="${id}"`), `Home must contain #${id}`);
   }
 });

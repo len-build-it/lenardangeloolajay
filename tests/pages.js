@@ -12,7 +12,7 @@ export const PAGES = [
   { route: '/credentials/', file: 'credentials/index.html', name: 'Credentials' },
 ];
 
-export const NAV_LINKS = ['/', '/aqone/', '/devguild/', '/#builds', '/#skills', '/credentials/', '/#contact'];
+export const NAV_LINKS = ['/', '/aqone/', '/devguild/', '/#builds', '/#how-i-build', '/credentials/', '/#contact'];
 
 export function readPage(page) {
   return fs.readFileSync(path.join(projectRoot, page.file), 'utf-8');

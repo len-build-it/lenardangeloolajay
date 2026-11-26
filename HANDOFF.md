@@ -1,8 +1,8 @@
 # Current handoff: student chasing impact (FEAT-003)
 
 Created: 2026-11-26T00:48:16+08:00
-Updated: 2026-11-26T01:20:00+08:00
-State: Approved for execution by Gemini; no phase started
+Updated: 2026-11-26T09:08:30+08:00
+State: In progress; Phase 1 complete, Phase 2 next
 Feature: FEAT-003 revision 1
 Plan: PLAN-003 revision 1
 Design: DESIGN-002 revision 3
@@ -52,7 +52,14 @@ Decisions Len made in chat are listed in FEAT-003 "Decisions and assumptions"; d
 
 ## Progress and working tree
 
-No PLAN-003 phase has started.
+Phase 1 (home page reframed) completed and verified:
+- Rewrote hero, "What I'm working toward" cards, "Earlier builds" and "How I build" on `index.html`.
+- Updated metadata, title, Open Graph, and structured data.
+- Updated header navigation on all four pages to point to `/#how-i-build`.
+- Added status-ladder component styles to `src/styles.css`.
+- 24 of 24 tests passed under `npm test` with active preview server.
+- Verified responsive layout and no horizontal overflow across 320, 390, 768, 1024, and 1440 px with screenshots captured.
+
 Untracked files installed by `npx len-toolkit start` on 2026-11-26 must be preserved and never staged: `.agents/skills/` additions, `.agents/skills/.len-toolkit.json`, `.claude/` and `CLAUDE.md`.
 The toolkit also reported that AGENTS.md, GEMINI.md and .gitignore differ from its templates; the local versions are intentional.
 Stage paths explicitly; never use `git add -A` or `git add .`.
@@ -83,7 +90,7 @@ Do not reset a count on a new session or silently reinterpret a failed check as 
 
 ## Next action
 
-Execute PLAN-003 phase 1 (home page), then phases 2 and 3, committing each with its checkpoint message and verifying the hash from Git.
+Execute PLAN-003 phase 2 (AqOne page), then phase 3 (Guild page), committing each with its checkpoint message and verifying the hash from Git.
 After phase 3, update this handoff and SPEC_INDEX to mark FEAT-003 executed and report commit hashes, checks and limitations.
 
 ## History

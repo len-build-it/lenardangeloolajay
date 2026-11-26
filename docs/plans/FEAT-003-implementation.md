@@ -43,22 +43,22 @@ Checkpoint message: `feat(portfolio): reframe home as a student chasing impact`
 ## Phase 2: AqOne page
 
 Requirements: FEAT-003/REQ-007 to REQ-012
-State: Awaiting approval
+State: Complete
 
 ### Tasks
 
-- [ ] Reorder and rewrite `aqone/index.html` per REQ-008 with the approved copy and the AqOne status ladder.
-- [ ] Confirm the Oceana and Pew source URLs by reading the pages; omit any figure whose source cannot be confirmed.
-- [ ] Add a test that fails if the AqOne page contains any REQ-010 term.
+- [x] Reorder and rewrite `aqone/index.html` per REQ-008 with the approved copy and the AqOne status ladder.
+- [x] Confirm the Oceana and Pew source URLs by reading the pages; omit any figure whose source cannot be confirmed.
+- [x] Add a test that fails if the AqOne page contains any REQ-010 term.
 
 ### Verification
 
-- [ ] Build and full test suite pass, as in Phase 1.
-- [ ] AqOne page screenshots at the five widths, recorded in the evidence file.
+- [x] Build and full test suite pass, as in Phase 1 (25 of 25 passed).
+- [x] AqOne page screenshots at the five widths, recorded in the evidence file.
 
 ### Review and checkpoint
 
-- [ ] Same review, evidence, handoff and commit gates as Phase 1.
+- [x] Same review, evidence, handoff and commit gates as Phase 1.
 
 Checkpoint message: `feat(portfolio): show AqOne's path to impact`
 

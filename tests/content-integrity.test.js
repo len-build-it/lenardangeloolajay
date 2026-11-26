@@ -96,6 +96,14 @@ test('No page links to the AqOne source repository', () => {
   }
 });
 
+test('AqOne page contains no forbidden technical terms per REQ-010', () => {
+  const html = readPage(PAGES[1]);
+  const forbidden = ['bug', 'queue', 'LoRa', 'MHz', 'ESP32', 'km', 'NTC', 'RSSI'];
+  for (const term of forbidden) {
+    assert.doesNotMatch(html, new RegExp(`\\b${term}\\b`, 'i'), `AqOne page must not contain '${term}'`);
+  }
+});
+
 test('Warang and Project Tabang are listed as earlier builds', () => {
   const html = readPage(PAGES[0]);
   assert.match(html, />Earlier builds<\/h2>/, 'Section is titled Earlier builds');

@@ -1,8 +1,8 @@
 # Current handoff: student chasing impact (FEAT-003)
 
 Created: 2026-11-26T00:48:16+08:00
-Updated: 2026-11-26T09:08:30+08:00
-State: In progress; Phase 1 complete, Phase 2 next
+Updated: 2026-11-26T09:14:00+08:00
+State: In progress; Phase 2 complete, Phase 3 next
 Feature: FEAT-003 revision 1
 Plan: PLAN-003 revision 1
 Design: DESIGN-002 revision 3
@@ -52,13 +52,13 @@ Decisions Len made in chat are listed in FEAT-003 "Decisions and assumptions"; d
 
 ## Progress and working tree
 
-Phase 1 (home page reframed) completed and verified:
-- Rewrote hero, "What I'm working toward" cards, "Earlier builds" and "How I build" on `index.html`.
-- Updated metadata, title, Open Graph, and structured data.
-- Updated header navigation on all four pages to point to `/#how-i-build`.
-- Added status-ladder component styles to `src/styles.css`.
-- 24 of 24 tests passed under `npm test` with active preview server.
-- Verified responsive layout and no horizontal overflow across 320, 390, 768, 1024, and 1440 px with screenshots captured.
+Phase 1 (home page reframed) completed and committed at `009d265`.
+Phase 2 (AqOne page path to impact) completed and verified:
+- Rewrote and reordered `aqone/index.html` per REQ-008 (hero, the problem, what AqOne does, where it stands status ladder, how we'll know it works, recognition and what it opened up, my role, on stage, updates).
+- Omitted unconfirmed statistics (Oceana 442,014 boat count could not be confirmed on source; Pew 100,000 fishing deaths was gated by Cloudflare anti-bot challenge); stated Aklan local data gap honestly.
+- Added REQ-010 automated test ensuring no forbidden technical or internal terms appear on the AqOne page.
+- 25 of 25 tests passed in `npm test` against local preview.
+- Captured screenshots at 320, 390, 768, 1024, and 1440 px with no horizontal overflow.
 
 Untracked files installed by `npx len-toolkit start` on 2026-11-26 must be preserved and never staged: `.agents/skills/` additions, `.agents/skills/.len-toolkit.json`, `.claude/` and `CLAUDE.md`.
 The toolkit also reported that AGENTS.md, GEMINI.md and .gitignore differ from its templates; the local versions are intentional.

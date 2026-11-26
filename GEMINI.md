@@ -1,12 +1,13 @@
-# Gemini entry point: portfolio editorial redesign
+# Gemini entry point: student chasing impact (FEAT-003)
 
-Read AGENTS.md including the Portfolio continuous-execution override.
-Read HANDOFF.md, docs/SPEC_INDEX.md, docs/features/FEAT-001-portfolio.md, and docs/product/DESIGN.md.
-Then read the linked architecture, constraints, and docs/plans/FEAT-001-implementation.md revision 2.
-The first site is already implemented; this task is the Artem-inspired visual redesign on the existing Vite/HTML/CSS/JS stack.
-Execute the three redesign phases continuously with reviewed commits.
-No routine approval pauses or fixed retry cutoff.
-Follow the concrete visual tokens, reference observations, mobile measurements, and VIS-001 through VIS-009.
-Actual screenshots and interaction checks are required evidence; passing builds alone do not establish visual quality.
-Preserve unrelated work and all supported credentials/contact links.
-Finish with the local production preview, representative screenshots, commit references, and honest limitations.
+Read AGENTS.md including the portfolio continuous-execution override.
+Read HANDOFF.md first; its top sections are current and its History section is not.
+Then read docs/SPEC_INDEX.md, docs/features/FEAT-003-student-chasing-impact.md, docs/plans/FEAT-003-implementation.md and docs/product/DESIGN-002.md revision 3.
+FEAT-002 revision 6 still applies wherever FEAT-003 does not replace it.
+The site is static HTML and CSS built with Vite; there is no JavaScript to add.
+Execute PLAN-003 phases 1 to 3 continuously with one reviewed commit per phase.
+Use the approved copy in FEAT-003 verbatim and do not reopen decisions Len already made.
+Actual screenshots are required evidence; a passing build alone does not establish visual quality.
+Preserve unrelated untracked files and stage paths explicitly.
+Do not push, deploy, or add an agent co-author line to commits.
+Finish with commit hashes from Git, actual check results, screenshot paths and honest limitations.

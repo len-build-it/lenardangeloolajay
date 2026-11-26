@@ -1,9 +1,9 @@
 # DESIGN-002: Guild colorway, neo-brutalist redesign
 
 Created: 2026-11-01T18:10:00+08:00
-Updated: 2026-11-01T19:25:00+08:00
-Revision: 2
-Status: Approved by Len in chat on 2026-11-01 ("im satisfied with the design, implement those")
+Updated: 2026-11-26T00:48:16+08:00
+Revision: 3
+Status: Revision 2 approved by Len in chat on 2026-11-01 ("im satisfied with the design, implement those"); revision 3 approved for execution with FEAT-003 on 2026-11-26
 
 ## Authority
 
@@ -78,3 +78,13 @@ The page sets `<body class="theme-aqone">`, which swaps the shared variables; co
 Headings use Outfit 700 instead of Alfa Slab One, matching the AqOne wordmark; the tagline is bold italic as on the banner.
 The hero shows the AqOne logo, cropped from the banner, in a bordered card with an aqua shadow.
 Line art follows the same per-ground rules, recolored in blue.
+
+## Status ladder (revision 3)
+
+FEAT-003 adds one component: a status ladder showing where an effort stands.
+It is an ordered list inside a bordered panel with the standard hard shadow (orange on AqOne's page theme, green elsewhere).
+Each rung is one row: the rung text, a state sticker (Done, Now, Next, Goal), and an optional "What I learned" line in secondary text below.
+Done rungs carry a check mark beside the sticker text; the Now rung's sticker uses the primary accent; Next and Goal stickers are outlined only.
+State is always written as text, so color is never the only signal.
+On the home cards the ladder is not repeated; a card shows only "Where it stands" and "Next" lines.
+At phone width the sticker moves above the rung text; no horizontal scroll.

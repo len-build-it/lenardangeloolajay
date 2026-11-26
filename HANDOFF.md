@@ -1,11 +1,95 @@
-# Current handoff: flagship documentation redesign
+# Current handoff: student chasing impact (FEAT-003)
 
-Created: 2026-09-06T15:55:03+08:00
-Updated: 2026-11-01T18:45:00+08:00
-State: FEAT-002 redesign implemented, verified locally, committed and pushed
-Feature: FEAT-002 revision 6
-Plan: PLAN-002 revision 1
-Design: DESIGN-002 revision 2
+Created: 2026-11-26T00:48:16+08:00
+Updated: 2026-11-26T01:20:00+08:00
+State: Approved for execution by Gemini; no phase started
+Feature: FEAT-003 revision 1
+Plan: PLAN-003 revision 1
+Design: DESIGN-002 revision 3
+
+## Read first
+
+1. [Project rules](AGENTS.md), including the portfolio continuous-execution override.
+2. [Specification index](docs/SPEC_INDEX.md).
+3. [FEAT-003: Student chasing impact](docs/features/FEAT-003-student-chasing-impact.md) - behavior, acceptance criteria and the exact approved copy.
+4. [PLAN-003](docs/plans/FEAT-003-implementation.md) - three phases, checks and checkpoint messages.
+5. [DESIGN-002](docs/product/DESIGN-002.md) revision 3 - tokens, neo-brutalist rules and the new status ladder.
+6. [FEAT-002](docs/features/FEAT-002-flagship-documentation.md) revision 6 - every rule FEAT-003 does not replace still applies, especially AC-2, AC-3 and AC-3b.
+
+Reread these files and inspect actual Git status before acting; prior chat memory is not authoritative.
+
+## Approval and allowed work
+
+| Document | Approved revision or commit | Actual Len chat approval reference |
+| --- | --- | --- |
+| FEAT-003 | Revision 1, committed with this handoff | 2026-11-26, after reviewing the drafts and answering every open question: "Create a handoff for gemini to execute this, give me the prompt after" |
+| PLAN-003 | Revision 1, same commit | Same message |
+| DESIGN-002 | Revision 3, same commit | Same message |
+
+Len did not write the word "approved"; his request to hand execution to Gemini is recorded here as the approval, in his exact words.
+Allowed phases: PLAN-003 phases 1, 2 and 3, executed continuously with a reviewed commit per phase.
+Architecture and behavior changes return to Len; this handoff cannot override the linked specs.
+
+## Background
+
+Len asked on 2026-11-26 to reposition the site as impact-driven, then refined it to "a student chasing impact", never claiming impact already made.
+The audience stays his existing network.
+Len's own evidence review found no LGU or MDRRMO contact, no recorded AqOne prize money and no published New Washington incident counts, so the approved copy avoids those claims.
+Decisions Len made in chat are listed in FEAT-003 "Decisions and assumptions"; do not reopen them.
+
+## Rules that are easy to break
+
+- Use the FEAT-003 "Approved copy" verbatim; fix only typos and line breaks.
+- Name no teammates or Guild members; the Guild adviser is the only other named person (FEAT-002 AC-3).
+- The AqOne page carries no internals, bug, test metric, range, radio, frequency or regulator detail (FEAT-003 REQ-010, FEAT-002 AC-2).
+- No link to the AqOne source repository (FEAT-002 AC-3b); the existing link to https://aqone-web.onrender.com/ stays.
+- Statistics on the AqOne page need a source link you have actually opened; if you cannot confirm a source URL, omit that figure and record it in the evidence file.
+- Do not invent "What I learned" lines beyond the three approved ones.
+- No new dependency, script, page, tracking or third-party resource.
+- Plain dashes, not em dashes, in visible copy and Markdown.
+- Do not add an agent co-author line to commits (AGENTS.md).
+- Do not push or deploy.
+
+## Progress and working tree
+
+No PLAN-003 phase has started.
+Untracked files installed by `npx len-toolkit start` on 2026-11-26 must be preserved and never staged: `.agents/skills/` additions, `.agents/skills/.len-toolkit.json`, `.claude/` and `CLAUDE.md`.
+The toolkit also reported that AGENTS.md, GEMINI.md and .gitignore differ from its templates; the local versions are intentional.
+Stage paths explicitly; never use `git add -A` or `git add .`.
+
+## Checks and evidence
+
+Baseline on 2026-11-26 before any FEAT-003 edit, on Windows in Git Bash:
+- `npm run build` passed.
+- `npx vite preview --host 127.0.0.1 --port 4173 --strictPort` in the background, then `PREVIEW_URL=http://127.0.0.1:4173 npm test`: 24 of 24 passed.
+
+Without `--host 127.0.0.1`, Vite binds to `localhost` (IPv6 on this machine) and the server-response tests fail with ECONNREFUSED on 127.0.0.1; that is an environment issue, not a site failure.
+Stop the preview process after testing.
+Record each phase's actual commands, results, screenshot paths and limitations in `docs/evidence/FEAT-003-verification.md` (create it in phase 1).
+
+## Blockers and attempts
+
+| Problem | Fix-and-check attempts used (maximum 3) | Changes tried and observed result | Required decision or access |
+| --- | --- | --- | --- |
+| None yet | 0 | - | - |
+
+Do not reset a count on a new session or silently reinterpret a failed check as passing.
+
+## Open items owned by Len
+
+- Enactus, PSC, RSTW and ASPIRE certificates; Enactus stays "Top 30 of 200+" meanwhile.
+- The Show and Tell's new date; until then it shows as Next with no date.
+- If the patent filing is a utility model, change "patent application".
+
+## Next action
+
+Execute PLAN-003 phase 1 (home page), then phases 2 and 3, committing each with its checkpoint message and verifying the hash from Git.
+After phase 3, update this handoff and SPEC_INDEX to mark FEAT-003 executed and report commit hashes, checks and limitations.
+
+## History
+
+Everything below is the record of FEAT-001 and FEAT-002 work.
+Its "Read first", "Authority" and "Next action" lines are superseded by the sections above.
 
 ## Review follow-ups (2026-11-01)
 

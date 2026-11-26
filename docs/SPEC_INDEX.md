@@ -1,7 +1,7 @@
 # Specification index
 
 Created: 2026-09-06T15:40:38+08:00
-Updated: 2026-11-01T16:30:00+08:00
+Updated: 2026-11-26T00:48:16+08:00
 
 | Category | ID | Current path | Revision | Status |
 | --- | --- | --- | --- | --- |
@@ -11,7 +11,9 @@ Updated: 2026-11-01T16:30:00+08:00
 | Design | DESIGN-001 | [Design and reference investigation](product/DESIGN.md) | 1 | Prepared for Gemini |
 | Feature | FEAT-001 | [Project specification](features/FEAT-001-portfolio.md) | 5 | Current portfolio and requested SEO behavior |
 | Feature | FEAT-002 | [Flagship documentation restructure](features/FEAT-002-flagship-documentation.md) | 6 | Approved 2026-11-01; current |
-| Design | DESIGN-002 | [Guild colorway, neo-brutalist redesign](product/DESIGN-002.md) | 2 | Approved 2026-11-01; current |
+| Feature | FEAT-003 | [Student chasing impact](features/FEAT-003-student-chasing-impact.md) | 1 | Approved for execution 2026-11-26; supersedes FEAT-002 page section lists |
+| Design | DESIGN-002 | [Guild colorway, neo-brutalist redesign](product/DESIGN-002.md) | 3 | Revision 2 approved 2026-11-01; revision 3 (status ladder) approved for execution 2026-11-26 |
+| Plan | PLAN-003 | [Student chasing impact plan](plans/FEAT-003-implementation.md) | 1 | Approved for execution 2026-11-26; not started |
 | Plan | PLAN-002 | [Flagship restructure plan](plans/FEAT-002-implementation.md) | 1 | Executed 2026-11-01 |
 | Plan | PLAN-001 | [Implementation plan](plans/FEAT-001-implementation.md) | 3 | Redesign complete; SEO locally verified, checkpoint prepared |
 
